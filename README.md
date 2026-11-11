@@ -11,6 +11,7 @@ Tamoz is a physical AI agent for the equipment you already run: it watches senso
 | `index.html` | The live page served by GitHub Pages. A copy of one design, so don't edit it directly. |
 | `designs/homepage.html` | General homepage (sites such as cold chain, data centres, EV charging, farms). |
 | `designs/manufacturing.html` | "Tamoz for Manufacturing" (press hall, compressed air, CNC, process water, ovens). |
+| `designs/conveyor.html` | "Tamoz for belt conveyors" (multi-drive belt conveyors in mining, aggregates, cement, ports, power and bulk terminals). Its animation replays one simulated test day. |
 | `switch.sh` | Chooses which design is live. |
 | `scripts/seo.py` | SEO/GEO pass: title, description, canonical, Open Graph, JSON-LD (incl. FAQ), hidden H1 keywords. Re-run after editing a design. |
 | `fonts/`, `img/`, `favicon.ico` | Self-hosted fonts, OG image and icons. |
@@ -26,7 +27,7 @@ Each design is a single HTML file with inline CSS and JS. Fonts are self-hosted 
 3. Make it live:
 
    ```bash
-   ./switch.sh homepage        # or: manufacturing
+   ./switch.sh homepage        # or: manufacturing, conveyor
    git add -A && git commit -m "Update design" && git push
    ```
 
@@ -47,7 +48,8 @@ Then open <http://127.0.0.1:8765/> for the live page, or `/designs/<name>.html` 
 ## Known gaps
 
 - The pilot request form posts to Formspree (`https://formspree.io/f/mjywbebj`) with `fetch`, and without JS it posts directly. Submissions go to the inbox set in the Formspree dashboard. The form still needs a privacy note and a privacy page.
-- The two designs are separate copies, so a change that should apply to both has to be made in both files.
+- The designs are separate copies, so a change that should apply to all of them has to be made in each file.
+- `designs/conveyor.html` cites two pages that are not live yet: source 3 (the personal-site conveyor page) and source 4 (`WEBSITE.md` on the streams-simulator `belt-m4-evidence` branch). Update both links once they are merged.
 
 ## Related
 
