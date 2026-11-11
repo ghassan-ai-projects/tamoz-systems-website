@@ -1,0 +1,19 @@
+# Tamoz
+
+> Tamoz is an AI operator for IoT sensors and physical equipment. It watches sensor data around the clock, works out what each change means, acts within fixed limits and asks a person before anything risky. It runs beside a site's existing alarm system, not instead of it, and keeps a case open until the readings show the problem is gone. Tamoz is in early development and is looking for its first pilot partners. The website is in English.
+
+## Key facts
+
+- Category: AI agent for alarm follow-up and remote monitoring of physical equipment (IoT).
+- Stage: early development; recruiting first pilot partners.
+- How it works: Watch (deterministic rules read every sensor) → Judge (AI agent wakes only when the situation changes) → Act (pre-approved action or alert to the right person) → Verify (case stays open until readings recover; escalates to the next person if not) → Learn (case memory informs the next similar event).
+- Safety limits: the AI decides what to do; fixed rules and device firmware decide how much. It never sets speeds, setpoints or other control values, never takes a risky action on missing or stale data, and never replaces required alarm or safety systems. Risky or regulatory decisions need a person to approve by tapping a button.
+- Deployment: runs off-site on separate power and network, so a site that goes silent becomes a warning. Reads existing sensors; can add low-cost retrofits such as current clamps.
+- Data: the customer owns the data.
+- Use cases: pig and poultry barns (ventilation), fish farms (oxygen), EV charging networks (remote restarts), data centres (cooling trends), water and heating utilities, supermarkets and cold storage, pharma cold chain (temperature excursions, deviation reports).
+- Pilot: prepare (up to 4 weeks) → install read-only sensors and a gateway (1 day) → shadow mode with weekly reports (about 6 weeks) → live alerts in parallel with the existing alarm (3 months or more) → first approved action after drills pass.
+- Pilot success criteria: catches every drill at least as fast as the existing alarm; fewer than one false alarm a week after tuning; every alert ends with a confirmed recovery; no interference with existing systems.
+
+## Pages
+
+- [Homepage](https://tamoz-systems.com/): the problem, how it works, safety limits, use cases, pilot, FAQ, pilot request.
