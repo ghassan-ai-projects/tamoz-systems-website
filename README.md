@@ -46,7 +46,7 @@ Then open <http://127.0.0.1:8765/> for the live page, or `/designs/<name>.html` 
 
 ## Known gaps
 
-- **The pilot request form is not connected to anything.** On submit it only shows "This preview isn't connected to an inbox yet". Wire it to a form service or a mailto link before sending traffic to it.
+- The pilot request form posts to Formspree (`https://formspree.io/f/mjywbebj`) with `fetch`, and without JS it posts directly. Submissions go to the inbox set in the Formspree dashboard. The form still needs a privacy note and a privacy page.
 - The two designs are separate copies, so a change that should apply to both has to be made in both files.
 
 ## Related

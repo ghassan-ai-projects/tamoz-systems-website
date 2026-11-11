@@ -336,6 +336,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .field select option{color:#0a1a31}
 .field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--blue-lite);outline-offset:1px}
 .form-status{margin:0;font-size:14px;line-height:1.5;color:var(--lantern)}
+.form-status.ok{color:var(--clear)}
+.btn:disabled{opacity:.6;cursor:wait}
 
 /* footer */
 .foot{background:var(--night);color:var(--muted);font-family:var(--lede);padding-block:44px 36px;border-top:1px solid var(--hair);font-size:13px}
@@ -574,7 +576,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <h2>Have a site that can't wait until morning?</h2>
       <p class="intro">Tell us what you run and who takes the alarm at 3 a.m. We'll tell you honestly whether a pilot makes sense.</p>
     </div>
-    <form id="pilotForm">
+    <form id="pilotForm" action="https://formspree.io/f/mjywbebj" method="POST">
+      <input type="hidden" name="_subject" value="Pilot request from tamoz-systems.com (homepage)">
+      <input type="hidden" name="page" value="homepage">
+      <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="two">
         <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
         <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
@@ -1552,11 +1557,23 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   }));
 
   // The form has no inbox behind it yet: say so instead of pretending to send.
-  document.getElementById('pilotForm').addEventListener('submit', e => {
+  /* pilot form: Formspree via fetch, no third-party script. Without JS the form posts directly. */
+  const pilotForm = document.getElementById('pilotForm');
+  pilotForm.addEventListener('submit', async e => {
     e.preventDefault();
-    const st = document.getElementById('formStatus');
-    st.textContent = "This preview isn't connected to an inbox yet, so your request wasn't sent.";
-    st.hidden = false;
+    const st = document.getElementById('formStatus'), btn = pilotForm.querySelector('button[type=submit]');
+    const say = (msg, ok) => { st.textContent = msg; st.classList.toggle('ok', ok); st.hidden = false; };
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const res = await fetch(pilotForm.action, { method: 'POST', body: new FormData(pilotForm), headers: { Accept: 'application/json' } });
+      if (res.ok) { pilotForm.reset(); say("Thanks. Your request has been sent, and we'll reply by email.", true); return; }
+      const data = await res.json().catch(() => ({}));
+      say((data.errors || []).map(x => x.message).join(' ') || "Something went wrong and your request wasn't sent. Please try again.", false);
+    } catch {
+      say("We couldn't reach the server, so your request wasn't sent. Please check your connection and try again.", false);
+    } finally {
+      btn.disabled = false; btn.textContent = 'Request a pilot';
+    }
   });
 
   /* boot */
