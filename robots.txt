@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tamoz-systems.com/sitemap.xml

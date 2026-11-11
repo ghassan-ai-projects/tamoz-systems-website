@@ -12,14 +12,18 @@ Tamoz is a physical AI agent for the equipment you already run: it watches senso
 | `designs/homepage.html` | General homepage (sites such as cold chain, data centres, EV charging, farms). |
 | `designs/manufacturing.html` | "Tamoz for Manufacturing" (press hall, compressed air, CNC, process water, ovens). |
 | `switch.sh` | Chooses which design is live. |
+| `scripts/seo.py` | SEO/GEO pass: title, description, canonical, Open Graph, JSON-LD (incl. FAQ), hidden H1 keywords. Re-run after editing a design. |
+| `fonts/`, `img/`, `favicon.ico` | Self-hosted fonts, OG image and icons. |
+| `robots.txt`, `sitemap.xml`, `llms.txt` | Crawler, sitemap and AI-assistant summary files. Update `lastmod` and `llms.txt` when content changes. |
 | `CNAME` | Custom domain for GitHub Pages. Don't delete it. |
 
-Each design is a single self-contained HTML file: inline CSS and JS, with Google Fonts as the only external dependency. There is no build step.
+Each design is a single HTML file with inline CSS and JS. Fonts are self-hosted in `fonts/` (no requests to Google). There is no build step.
 
 ## Workflow
 
 1. Edit the design in `designs/`.
-2. Make it live:
+2. Run `python3 scripts/seo.py` (titles and descriptions live in its `CONFIG`).
+3. Make it live:
 
    ```bash
    ./switch.sh homepage        # or: manufacturing
