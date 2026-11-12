@@ -1386,8 +1386,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     for (const lb of LABELS) {
       const [sx, sy] = P(...lb.at), x = Math.round((sx - cam.x) * cam.z + camScreen().x), y = Math.round((sy - cam.y) * cam.z + camScreen().y);
       if (x !== lb.tx || y !== lb.ty) { lb.el.style.transform = `translate(${x}px,${y}px)`; lb.tx = x; lb.ty = y; }
-      // like the compact tags, the labels stay out of the small phone overview
-      lb.el.style.opacity = phone && overview ? 0 : 1;
+      // like the compact tags, the labels stay out of the small phone overview; F-1 steps aside while D-3 is the subject
+      lb.el.style.opacity = (phone && overview) || (lb.el.textContent.startsWith('F') && [0, 1, 4].includes(curIdx())) ? 0 : 1;
     }
   }
 
