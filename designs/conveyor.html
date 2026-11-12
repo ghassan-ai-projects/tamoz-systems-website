@@ -696,7 +696,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   const CH = [
     { id: 'peers', name: 'D-3 against its peers', power: 'Compares each drive with its peers', res: 'Watch set', resSt: 'check',
       k: 'D-3 winding above peers', ov: ['0.0 K', 'D-3 stopped'], a: [19.6, 38.2, 2], zoom: 2.2, unit: ' K', dp: 1, wob: .02, L: 16.5,
-      curve: [[0, 0.0], [1.4, 0.0], [2.4, 0.1], [3.0, 0.5], [3.4, 1.0], [5.6, 2.0], [16.5, 2.0]],
+      curve: [[0, 0.0], [1.4, 0.0], [2.4, 0.1], [3.0, 0.5], [3.4, 1.0], [5.6, 2.0], [13.2, 2.0], [16.5, 4.2]],
       sub: l => l < 3.4 ? 'Same current as D-1 and D-2' : l < 10.6 ? 'Same current · winding rising' : 'Watch set on vibration',
       lines: [
         { at: 1.4, time: '01:41', text: 'Sealed truth, hidden from Tamoz until grading: D-3\'s bearing starts losing its lubrication. Nothing shows yet.' },
@@ -708,7 +708,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       ] },
     { id: 'bearing', name: 'Bearing named', power: 'Names a cause only when the evidence does', res: 'Full feed kept', resSt: 'check',
       k: 'D-3 vibration above peers', ov: ['0.00 mm/s', 'D-3 stopped'], a: [18.5, 38.2, 1.6], ox: -170, zoom: 2.4, unit: ' mm/s', dp: 2, limit: .30, wob: .004, L: 10.5,
-      curve: [[0, 0.10], [1.2, 0.30], [10.5, 0.30]],
+      curve: [[0, 0.26], [1.2, 0.30], [7.6, 0.30], [10.5, 1.25]],
       sub: l => l < 1.2 ? 'Watch at +0.30 mm/s' : 'Bearing named · full feed',
       lines: [
         { at: 1.2, time: '06:32', st: 'check', ev: 'alarm', text: 'Watch fired. D-3\'s vibration is 0.30 mm/s above the best peer, and its winding 4.7 K hotter, at the same current.' },
@@ -757,7 +757,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         { at: 7.6, time: '09:30', st: 'ok', ev: 'ok', text: 'The belt keeps producing on two drives. D-3 is down to 47 °C.' }
       ] },
     { id: 'restart', name: 'Routine stop, clean restart', power: 'Leaves a routine stop alone', res: 'Restarted', resSt: 'ok',
-      k: 'Belt speed', ov: ['2.0 m/s', '2.0 m/s'], a: [17.7, 12, 1.2], ox: -60, zoom: 2, unit: ' m/s', dp: 1, wob: .004, L: 10.5, noUp: true,
+      k: 'Belt speed', ov: ['2.0 m/s', '2.0 m/s'], a: [17.7, 12, 1.2], ox: 90, zoom: 2, unit: ' m/s', dp: 1, wob: .004, L: 10.5, noUp: true,
       curve: [[0, 2.0], [1.1, 2.0], [1.2, 0.0], [5.2, 0.0], [7.6, 2.0], [10.5, 2.0]],
       sub: l => l < 1.2 ? 'Downstream permit on' : l < 5.2 ? 'Routine stop · 226 kg on the belt' : 'Restarted on two drives',
       lines: [
@@ -1333,11 +1333,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   const TAGS = CH.map((c, i) => { const t = mkTag(i, nb(c.k)); if (c.ox) t.el.style.setProperty('--ox', c.ox + 'px'); return t; });
   const TOWER = mkTag(-1, 'Tamoz');
   // small permanent names on the plant: anchor in world units, nudge in pixels
-  const LABELS = [['D-1', [BX1 + 2.4, DRV[0].y - .3, 0], 62], ['D-2', [BX1 + 2.4, DRV[1].y + .3, 0], 30], ['D-3', [BX1 + 2.4, DRV[2].y + .3, 0], 0], ['F-1', [15.8, 36.9, 0], -12]].map(([name, at, dx]) => {
+  const LABELS = [['D-1', [BX1 + 2.1, DRV[0].y, .3]], ['D-2', [BX1 + 1, DRV[1].y + .7, .1]], ['D-3', [BX1 + 2.1, DRV[2].y + .4, .2]], ['F-1', [18.45, 36.3, .1]]].map(([name, at]) => {
     const el = document.createElement('div'); el.className = 'wlabel'; el.textContent = nb(name); tagsEl.prepend(el);
-    return { el, at, dx, tx: 0, ty: 0 };
+    return { el, at, tx: 0, ty: 0 };
   });
-  TOWER.el.dataset.st = 'tower'; TOWER.el.style.setProperty('--ox', '66px');
+  TOWER.el.dataset.st = 'tower'; TOWER.el.style.setProperty('--ox', '-36px');
 
   function readingAt(i, l) {
     const c = CH[i], cu = c.curve;
@@ -1384,8 +1384,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     place(TOWER, sx, sy, overview ? 1 : 0);
     TOWER.el.classList.toggle('keep', overview);
     for (const lb of LABELS) {
-      const [sx, sy] = P(...lb.at), x = Math.round((sx - cam.x) * cam.z + camScreen().x + lb.dx), y = Math.round((sy - cam.y) * cam.z + camScreen().y);
+      const [sx, sy] = P(...lb.at), x = Math.round((sx - cam.x) * cam.z + camScreen().x), y = Math.round((sy - cam.y) * cam.z + camScreen().y);
       if (x !== lb.tx || y !== lb.ty) { lb.el.style.transform = `translate(${x}px,${y}px)`; lb.tx = x; lb.ty = y; }
+      // like the compact tags, the labels stay out of the small phone overview
+      lb.el.style.opacity = phone && overview ? 0 : 1;
     }
   }
 
