@@ -44,6 +44,12 @@ CONFIG = {
                        "acts within fixed limits and asks a person before anything risky.",
         "h1_prefix": "Tamoz for manufacturing, the AI operator for factory alarms: ",
     },
+    "conveyor": {
+        "title": "Tamoz for Belt Conveyors – AI Operator for Conveyor Drives",
+        "description": "Tamoz compares each conveyor drive with its peers, predicts when a failing drive "
+                       "will trip, and asks a person to stop it by plan before the belt strands.",
+        "h1_prefix": "Tamoz for belt conveyors, the AI operator for multi-drive conveyors: ",
+    },
 }
 
 HIDDEN_CSS = (".visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;"

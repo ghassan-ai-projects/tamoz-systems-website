@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
-<title>Tamoz – AI Operator for IoT Sensors and Equipment Alarms</title>
-<meta name="description" content="Tamoz watches your sensor data around the clock, works out what each alarm means, acts within fixed limits and asks a person before anything risky.">
+<title>Tamoz for Belt Conveyors – AI Operator for Conveyor Drives</title>
+<meta name="description" content="Tamoz compares each conveyor drive with its peers, predicts when a failing drive will trip, and asks a person to stop it by plan before the belt strands.">
 <link rel="stylesheet" href="/fonts/fonts.css">
 <!-- seo:start -->
 <link rel="canonical" href="https://tamoz-systems.com/">
@@ -12,15 +12,15 @@
 <meta property="og:site_name" content="Tamoz">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://tamoz-systems.com/">
-<meta property="og:title" content="Tamoz – AI Operator for IoT Sensors and Equipment Alarms">
-<meta property="og:description" content="Tamoz watches your sensor data around the clock, works out what each alarm means, acts within fixed limits and asks a person before anything risky.">
+<meta property="og:title" content="Tamoz for Belt Conveyors – AI Operator for Conveyor Drives">
+<meta property="og:description" content="Tamoz compares each conveyor drive with its peers, predicts when a failing drive will trip, and asks a person to stop it by plan before the belt strands.">
 <meta property="og:image" content="https://tamoz-systems.com/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Tamoz logo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tamoz – AI Operator for IoT Sensors and Equipment Alarms">
-<meta name="twitter:description" content="Tamoz watches your sensor data around the clock, works out what each alarm means, acts within fixed limits and asks a person before anything risky.">
+<meta name="twitter:title" content="Tamoz for Belt Conveyors – AI Operator for Conveyor Drives">
+<meta name="twitter:description" content="Tamoz compares each conveyor drive with its peers, predicts when a failing drive will trip, and asks a person to stop it by plan before the belt strands.">
 <meta name="twitter:image" content="https://tamoz-systems.com/img/og-image.jpg">
 <script type="application/ld+json">
 {
@@ -53,8 +53,8 @@
    "@type": "WebPage",
    "@id": "https://tamoz-systems.com/#webpage",
    "url": "https://tamoz-systems.com/",
-   "name": "Tamoz – AI Operator for IoT Sensors and Equipment Alarms",
-   "description": "Tamoz watches your sensor data around the clock, works out what each alarm means, acts within fixed limits and asks a person before anything risky.",
+   "name": "Tamoz for Belt Conveyors – AI Operator for Conveyor Drives",
+   "description": "Tamoz compares each conveyor drive with its peers, predicts when a failing drive will trip, and asks a person to stop it by plan before the belt strands.",
    "inLanguage": "en",
    "isPartOf": {
     "@id": "https://tamoz-systems.com/#website"
@@ -76,50 +76,50 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "Does Tamoz replace our alarm system?",
+     "name": "Does Tamoz replace SCADA, the drive inverters or our condition monitoring?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No. Your required alarm and safety systems stay primary. Tamoz adds a layer that follows each case through to the outcome."
+      "text": "No. It sits above them, follows events to an outcome and hands work to the systems you already use."
      }
     },
     {
      "@type": "Question",
-     "name": "Do we need new sensors?",
+     "name": "How does it connect to our PLCs and drives?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Often only a few. Tamoz reads what you already have and can add low-cost retrofits where needed, such as current clamps that prove a fan is really running."
+      "text": "Through an edge gateway in front of your equipment, which reads the signals you choose. It works with values such as vibration RMS, currents and temperature trends; spectral analysis stays at the edge or in your condition-monitoring system. We scope the protocols and network boundaries with your team during pilot preparation."
      }
     },
     {
      "@type": "Question",
-     "name": "Where does it run?",
+     "name": "Can the AI stop a drive or the belt?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Off-site, on power and a network separate from your site. That's how a site that goes silent becomes a warning rather than a blind spot."
+      "text": "It can ask. Stopping the feeder, a drive or the belt needs a person's approval; in our simulated tests, an automated approver stood in. It never sets a drive's speed or torque. Pull-wire switches, interlocks, E-stops and the drives' own protection stay outside Tamoz and overrule it."
      }
     },
     {
      "@type": "Question",
-     "name": "Can the AI change our setpoints?",
+     "name": "We already have condition monitoring. Why add this?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No. It chooses from actions you've approved. Fixed rules and device firmware control how far each action goes."
+      "text": "Tamoz uses its output. Condition monitoring tells you a drive is unhealthy. Tamoz decides when to stop it, empties the belt first and keeps the belt restartable on the drives you have left. On our test day, a plain vibration alarm stopped the failing drive 34 minutes later than Tamoz, and the simulator scored it 0.5 equivalent production hours worse."
      }
     },
     {
      "@type": "Question",
-     "name": "Can it handle vibration or other high-frequency signals?",
+     "name": "What has been proven, and what hasn't?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Not as raw waveforms. It works with values such as RMS and trends, so high-frequency data needs extraction at the edge or an existing condition-monitoring system upstream."
+      "text": "Simulation only so far: a small, flat 60 m conveyor with three drives and synthetic engineering data, not a customer site. The rules ran up to 10 simulated days per story, the live AI three per fault story, and the normal-day and surge tests ran without the live AI. Alone, the AI first held back on the bearing story, 0 of 3, until the system around it named the symptom and woke it on new evidence; then 3 of 3. The trip prediction was tuned on the same simulated days it was judged on. No real conveyor has run this, and savings in a real operation have not been measured. A pilot is how we find out."
      }
     },
     {
      "@type": "Question",
-     "name": "Who owns the data?",
+     "name": "Where does it run, and who owns the data?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "You do."
+      "text": "It runs separately from the systems it watches, and we agree hosting with your IT and OT teams. The data stays yours."
      }
     }
    ]
@@ -154,6 +154,19 @@
   --display:"Barlow Condensed","Arial Narrow","Helvetica Neue",sans-serif;
   --body:"Barlow","Helvetica Neue",Arial,sans-serif;
   --data:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  /* the isometric world: every colour the script paints with (6-digit hex, read once at load) */
+  --w-lit:#ffcf8a;--w-cold:#d8f2ff;
+  --w-skytop:#0a1224;--w-skytopdawn:#34477a;--w-skylow:#14243f;--w-skylowdawn:#c9958d;--w-star:#e8f0ff;
+  --w-edge:#0d1a23;--w-edge2:#142631;--w-ground:#1c3a3f;--w-ground2:#21444a;--w-ground3:#1b363d;--w-grid:#bfe0e6;
+  --w-pad:#26383f;--w-yard:#27384a;--w-yard2:#22313f;--w-road:#121e2e;--w-roadline:#4a5f7c;
+  --w-pond:#143a5e;--w-pond2:#0d2a49;--w-bank:#183237;--w-shimmer:#6fa6cc;--w-island:#2f4d4f;--w-island2:#37585a;
+  --w-trunk:#23252b;--w-pine:#16343b;--w-pinelit:#265056;--w-leaf:#1b3f43;--w-leaflit:#2b5a5c;--w-pole:#4c5d78;
+  --w-car1:#4a6d8f;--w-car2:#8a5a4a;--w-car3:#b4bfd0;--w-glass:#6b7d99;--w-truck:#c79a3f;
+  --w-wall:#62739a;--w-house:#55668a;--w-roof:#5e4640;--w-mullion:#28334a;--w-concrete:#5a677a;
+  --w-steel:#8796ad;--w-steeldark:#4a586f;--w-belt:#1a222e;--w-beltedge:#3a4658;--w-beltmark:#7f8ea6;
+  --w-ore:#8a6f4d;--w-orelit:#c09a68;--w-hopper:#74849c;--w-chute:#5f7088;
+  --w-motor:#5e7192;--w-gear:#7a8aa3;--w-guard:#c79a3f;--w-sensor:#c3d0e2;
+  --w-tower:#9aa9bf;--w-band:#3b4a60;--w-band2:#566880;--w-cap:#c3d0e2;--w-head:#36465c;--w-headtop:#4f6079;--w-spire:#71829c;
   color-scheme:dark;
 }
 html{scroll-behavior:smooth}
@@ -161,7 +174,7 @@ html{scroll-behavior:smooth}
 body{background:var(--night);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45}
 *{box-sizing:border-box}
 .stage{position:relative;height:clamp(790px,calc(100vh - 64px),900px);overflow:hidden;display:grid;
-  grid-template-columns:minmax(400px,32%) 1fr;grid-template-rows:auto 1fr auto;background:var(--night)}
+  grid-template-columns:minmax(400px,32%) 1fr;grid-template-rows:auto minmax(0,1fr) auto;background:var(--night)}
 .viewport{position:absolute;inset:0;overflow:hidden}
 .viewport canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .viewport::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
@@ -175,16 +188,18 @@ body{background:var(--night);color:var(--ink);font-family:var(--body);font-size:
 h1{margin:0;font-family:var(--lede);font-weight:600;font-size:clamp(30px,min(3.05vw,5.6vh),44px);line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
 .lede p{margin:0;font-family:var(--lede);color:var(--muted);max-width:44ch;font-size:14px;line-height:1.55}
 
-.log{grid-column:1;grid-row:2;align-self:end;display:flex;flex-direction:column;gap:8px;
+.log{grid-column:1;grid-row:2;align-self:stretch;min-height:0;display:flex;flex-direction:column;gap:8px;
   padding-block:18px 18px;padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:16px;min-width:0}
 .log-zone{margin:0;font-family:var(--data);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--lantern)}
 .log .log-title{margin:0;font-family:var(--display);font-weight:500;font-size:25px;line-height:1.08;text-wrap:balance}
-#lines{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;min-height:206px}
+#lines{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;flex:1 1 auto;min-height:0;overflow:hidden}
+#lines.clip{-webkit-mask-image:linear-gradient(#0000,#000 30px);mask-image:linear-gradient(#0000,#000 30px)}
 #lines li{display:grid;grid-template-columns:42px 1fr;gap:8px;font-family:var(--data);font-size:13px;line-height:1.42;color:var(--muted);animation:rise .4s ease-out both}
 #lines li b{font-weight:400;opacity:.72}
 #lines li:last-child{color:var(--ink)}
 #lines li span{min-width:0}
 #lines li.plain{grid-template-columns:1fr}
+#lines.wide li{grid-template-columns:88px 1fr}
 @keyframes rise{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 
 .shift{grid-column:1/-1;grid-row:3;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;
@@ -211,6 +226,7 @@ h1{margin:0;font-family:var(--lede);font-weight:600;font-size:clamp(30px,min(3.0
 .watch svg{width:12px;height:12px;fill:currentColor}
 
 #tags{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.wlabel{position:absolute;left:0;top:0;will-change:transform;margin:-9px 0 0 -14px;padding:1px 5px;border-radius:3px;background:var(--tag-bg);border:1px solid var(--hair);font-family:var(--data);font-size:11px;line-height:1.3;color:var(--ink);white-space:nowrap}
 .tag{position:absolute;left:0;top:0;will-change:transform;transition:opacity .45s;--c:var(--clear)}
 .tag[data-st=alarm]{--c:var(--alarm)}
 .tag[data-st=check],.tag[data-st=wait]{--c:var(--lantern)}
@@ -224,6 +240,7 @@ h1{margin:0;font-family:var(--lede);font-weight:600;font-size:clamp(30px,min(3.0
 .tag-v::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--c);margin-right:6px;vertical-align:1px}
 .tag-sub,.spark{display:none}
 .tag.on .tag-in{padding:8px 11px 9px;gap:2px;min-width:176px}
+.tag.on .tag-in{transform:translateX(-50%)}
 .tag.on .tag-v{font-size:21px;line-height:1.2;color:var(--c)}
 .tag.on .tag-v::before{display:none}
 .tag.on .tag-sub{display:block;color:var(--muted)}
@@ -321,8 +338,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .phases p{margin:0;font-size:14.5px;line-height:1.6;color:var(--slate);max-width:50ch}
 
 /* faq */
+.roles{margin-top:36px;border-top:1px solid var(--rule)}
+.roles dd{color:var(--slate)}
 .faq{margin:40px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px}
-.faq>div{padding:20px 0;border-top:1px solid var(--rule);min-width:0}
+.sec-white .faq>div,.faq>div{padding:20px 0;border-top:1px solid var(--rule);min-width:0}
 .faq dt{font-weight:600;font-size:16px;line-height:1.35}
 .faq dd{margin:7px 0 0;font-size:14.5px;line-height:1.6;color:var(--slate)}
 
@@ -367,6 +386,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   #top{scroll-margin-top:58px}
   .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
   .flow,.rules,.facts,.pilot,.faq,.contact,.two{grid-template-columns:minmax(0,1fr)}
+  .gap{width:100%}
   .cases{grid-template-columns:minmax(0,1fr)}
   .case.wide,.case:nth-child(7){grid-column:auto}
   .case canvas{height:210px}
@@ -393,7 +413,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   .shift::-webkit-scrollbar{display:none}
   .shift li{flex:0 0 136px}
   .log{order:4;padding-block:14px 26px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-  #lines{min-height:236px}
+  .log{align-self:auto}
+  #lines{min-height:236px;flex:none;overflow:visible}
   .tag:not(.on):not(.keep){opacity:0!important}
   .tag.on .tag-in{min-width:150px}
 }
@@ -413,7 +434,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <a href="#problem">The gap</a>
     <a href="#how">How it works</a>
     <a href="#limits">Safety limits</a>
-    <a href="#use-cases">Use cases</a>
+    <a href="#use-cases">Results</a>
     <a href="#pilot">Pilot</a>
   </nav>
   <a class="btn btn-small" href="#contact">Request a pilot</a>
@@ -422,8 +443,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <main>
 <section class="stage" id="top" aria-label="Introduction">
   <header class="lede">
-    <h1><span class="visually-hidden">Tamoz, the AI operator for IoT equipment alarms: </span>IoT that acts, learns and improves.</h1>
-    <p>Tamoz turns sensor data into decisions. It watches your equipment around the clock, works out what each change means, acts within fixed limits and asks a person before anything risky. It remembers how every case ended and uses that the next time.</p>
+    <h1><span class="visually-hidden">Tamoz for belt conveyors, the AI operator for multi-drive conveyors: </span>Catch a failing drive before it strands a loaded belt.</h1>
+    <p>Tamoz turns drive and belt data into decisions. It compares every drive with its peers around the clock, says how long a weakening drive has left, then empties the belt and stops that drive by plan. A person approves every stop; in our simulated tests, an automated approver stood in. The day below is one of those tests, replayed with the AI's real decisions.</p>
     <div class="cta-row">
       <a class="btn" href="#contact">Request a pilot</a>
       <a class="btn btn-quiet" href="#how">How it works</a>
@@ -431,11 +452,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   </header>
 
   <div class="viewport" id="vp">
-    <canvas id="world" role="img" aria-label="An isometric night landscape with a pig barn, fish ponds, an EV charging station, a data centre, a water plant, a supermarket and a container yard, all watched by a lantern tower on a lake."></canvas>
+    <canvas id="world" role="img" aria-label="An isometric bulk-handling site at night: a hopper and feeder load a 60 m belt conveyor pulled by three drives, D-1 and D-2 at the head and D-3 at the tail, with their inverters in an electrical room, a transfer to the next machine downstream, and the Tamoz lantern mast watching over them."></canvas>
     <div id="tags" aria-hidden="true"></div>
     <div class="watch">
-      <small>Example night</small>
-      <time id="clock">01:58</time>
+      <small>Simulated test day</small>
+      <time id="clock">00:00</time>
       <button id="toggle" type="button" aria-label="Pause animation"></button>
     </div>
   </div>
@@ -446,30 +467,33 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <ol id="lines"></ol>
   </section>
 
-  <ol class="shift" id="shift" aria-label="Shift log: jump to an event"></ol>
+  <ol class="shift" id="shift" aria-label="Day log: jump to a step"></ol>
 </section>
 
 <section class="sec" id="problem">
   <div class="wrap">
     <p class="eyebrow">The gap</p>
-    <h2>Most equipment disasters aren't sensor failures.</h2>
-    <p class="intro">The sensors usually worked. What failed came after the alarm. Tamoz is built for that stretch, between the first signal and the problem actually being solved.</p>
+    <h2>Your drives already have protection. The cost is when it trips.</h2>
+    <p class="intro">Most conveyors have drive protection, inverters and a SCADA screen. What they lack is something that turns a drive's early warning into a planned stop before its protection trips with the belt full, including at 3 a.m.</p>
     <div class="table-scroll">
     <table class="gap">
       <thead><tr><th scope="col">What goes wrong</th><th scope="col">What it looks like</th><th scope="col">What Tamoz is built to do</th></tr></thead>
       <tbody>
-        <tr><th scope="row">The alarm is accepted, and nothing happens</th>
-          <td>Nordhausen, Germany, 2022: 2,089 pigs died after a ventilation fan failed. The on-call employee accepted the alarm but did not drive to the barn.<a class="ref" href="#sources">1</a></td>
-          <td>Keep watching after someone replies. If the readings don't recover, alert the next person.</td></tr>
-        <tr><th scope="row">The alarm is off or set wrong</th>
-          <td>Cleveland, USA, 2018: more than 4,000 eggs and embryos were lost while a storage tank's remote alarm was turned off.<a class="ref" href="#sources">2</a> UK, 2020: 27,249 chickens died in a shed where the alarm sounded at 37 °C instead of 27 °C.<a class="ref" href="#sources">3</a></td>
-          <td>Read the sensors independently of the site's alarm, and treat a silent site as a warning in its own right.</td></tr>
-        <tr><th scope="row">So many alarms that people stop reacting</th>
-          <td>Across millions of pharma shipments, ELPRO found a true temperature excursion behind fewer than 10% of alerts.<a class="ref" href="#sources">4</a></td>
-          <td>Check for harmless explanations and state how sure it is before anyone gets called.</td></tr>
+        <tr><th scope="row">A trip at the worst moment</th>
+          <td>The protection does its job, but with the belt full. In our small-margin simulation, the two healthy drives tripped 104 seconds after the failing one, and the belt stood stranded for the last 5 h 37 min of the test day. Siemens puts unplanned downtime at a large heavy-industry plant at $59 million a year.<a class="ref" href="#sources">1</a></td>
+          <td>Predict the trip, empty the belt and stop the failing drive by plan before its protection does.</td></tr>
+        <tr><th scope="row">Too many alarms to read</th>
+          <td>Guidance based on EEMUA 191 and ISA-18.2 treats about 12 alarms an hour as the most an operator can manage. Poorly performing systems can exceed 250 in ten minutes.<a class="ref" href="#sources">2</a></td>
+          <td>Check for harmless explanations, such as a feed surge that loads every drive at once, and state how sure it is before anyone gets called.</td></tr>
         <tr><th scope="row">Slow trouble nobody connects</th>
-          <td>A chiller or a pump drifts for days without crossing a limit, then fails at the worst possible hour.</td>
-          <td>Follow trends over time and remember how similar cases ended, so the problem reaches a person in working hours.</td></tr>
+          <td>A bearing dries out over hours. One drive runs a little hotter and shakes a little more than its peers, below every alarm limit. On our test day, a plain vibration alarm stopped that drive 34 minutes later than Tamoz did.</td>
+          <td>Compare each drive with its peers at the same current, estimate the time to trip and plan the stop while there is still time.</td></tr>
+        <tr><th scope="row">A belt two drives cannot restart</th>
+          <td>A loaded belt needs more force to start than to keep running. With one drive gone, the other two may not restart it, and the material comes off by hand.<a class="ref" href="#sources">3</a></td>
+          <td>Keep the belt light enough for the drives you have left: empty it before a planned stop, then feed only what two drives can restart.</td></tr>
+        <tr><th scope="row">Silence that looks like calm</th>
+          <td>A vibration sensor freezes at a healthy value, or stops reporting. The screen shows a healthy drive.</td>
+          <td>Report the sensor first, never read silence as "all clear", and follow the drive by another signal, such as its winding temperature.</td></tr>
       </tbody>
     </table>
     </div>
@@ -479,14 +503,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <section class="sec sec-white" id="how">
   <div class="wrap">
     <p class="eyebrow">How it works</p>
-    <h2>From sensor reading to confirmed recovery</h2>
-    <p class="intro">Tamoz connects to the sensors and alarm outputs you already run. A case stays open until the readings show the problem is gone.</p>
+    <h2>From drive signal to a planned stop</h2>
+    <p class="intro">Tamoz sits above your PLCs, drive inverters, SCADA and maintenance system. It doesn't replace them, and a case stays open until the readings show the belt is safe.</p>
     <ol class="flow">
-      <li><span class="who">Rules, always on</span><h3>Watch</h3><p>A deterministic layer reads every sensor around the clock and applies your rules. Normal readings never reach the AI, so they cost nothing.</p></li>
-      <li><span class="who">AI agent, on change only</span><h3>Judge</h3><p>When the situation changes, the agent wakes. It checks whether the problem is real, what else could explain it and how sure it can be.</p></li>
-      <li><span class="who">AI decides, limits apply</span><h3>Act</h3><p>It takes a pre-approved action or alerts the right person. Fixed rules and the device's own firmware control how far any action goes.</p></li>
-      <li><span class="who">Rules, always on</span><h3>Verify</h3><p>It keeps watching the readings. "On my way" doesn't close a case. If nothing improves, it moves to the next person on the list.</p></li>
-      <li><span class="who">Case memory</span><h3>Learn</h3><p>It records what happened and how the case ended. The next similar event starts from that history, and every decision can be replayed.</p></li>
+      <li><span class="who">Rules, always on</span><h3>Watch</h3><p>A deterministic layer turns drive currents, winding temperatures, vibration, belt speed and feed into windowed values, and compares every drive with its peers around the clock. Normal readings never reach the AI: on our test day, 77,705 sensor readings led to five model calls.</p></li>
+      <li><span class="who">AI agent, on change only</span><h3>Judge</h3><p>When one drive starts to differ, the agent wakes. It checks whether it's one drive or the whole belt, what else could explain it, how sure it can be and how long the drive has left.</p></li>
+      <li><span class="who">AI decides, limits apply</span><h3>Act</h3><p>It asks for a step from the list your team defines, such as running the belt empty or stopping a drive by plan. Stopping steps wait for a person's approval, and your own controls decide how far any step goes.</p></li>
+      <li><span class="who">Rules, always on</span><h3>Verify</h3><p>A step counts only when the plant reads it back. "On it" doesn't close a case. If the readings don't follow, it moves to the next person on the list.</p></li>
+      <li><span class="who">Case memory</span><h3>Learn</h3><p>It records how each case ended and starts the next one from that history. Proposed improvements are tested on past cases and can be rolled back.</p></li>
     </ol>
     <div class="loop" aria-hidden="true"><span>Every closed case informs the next decision</span></div>
   </div>
@@ -495,77 +519,89 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <section class="sec sec-night" id="limits">
   <div class="wrap">
     <p class="eyebrow">Safety limits</p>
-    <h2>The AI decides what. Fixed rules decide how much.</h2>
-    <p class="intro">Tamoz can say "cool" or "open the vents". It never chooses a fan speed or a setpoint. Your site decides which actions it may take at all.</p>
+    <h2>The AI decides what. Your controls decide how much.</h2>
+    <p class="intro">Tamoz is a supervisory layer. It can ask for "run the belt empty" or "limp feed", levels your team defines, but it never sets a drive's speed or torque, and your plant decides which steps it may request at all.</p>
     <div class="rules">
       <div class="rule-col" style="--c:var(--clear)"><h3>Does on its own</h3><ul>
-        <li>Filters false alarms and logs them</li><li>Alerts people in the order you set</li><li>Takes small pre-approved actions, such as restarting a charger or starting an aerator</li></ul></div>
+        <li>Compares every drive with its peers and logs what it sees</li><li>Sets watches that wake it when a drive moves, and alerts people in the order you set</li><li>Requests small, reversible steps you have approved, such as a reduced feed after a drive is stopped</li></ul></div>
       <div class="rule-col" style="--c:var(--lantern)"><h3>Asks a person first</h3><ul>
-        <li>Anything your site marks as risky</li><li>Decisions with regulatory weight, such as releasing or quarantining a pharma load</li><li>Approval means tapping a button. A spoken "yes" doesn't count</li></ul></div>
+        <li>Stopping the feeder, a drive or the belt</li><li>Anything else you mark as risky</li><li>Approval means tapping a button. In our simulated tests, an automated approver stood in</li></ul></div>
       <div class="rule-col" style="--c:var(--alarm)"><h3>Never does</h3><ul>
-        <li>Sets speeds, setpoints or other control values</li><li>Takes a risky action on missing or stale data</li><li>Replaces your required alarm or safety systems</li></ul></div>
+        <li>Touches E-stops, pull-wire switches, interlocks or the drives' own protection</li><li>Takes a risky step on missing or stale data</li><li>Rewrites its own rules or limits while it runs</li></ul></div>
     </div>
     <dl class="facts">
-      <div><dt>Beside your alarm</dt><dd>The system you already have stays primary and untouched.</dd></div>
-      <div><dt>Off-site by design</dt><dd>It runs on separate power and network, so it notices when a site goes quiet.</dd></div>
-      <div><dt>A full record</dt><dd>Who was told what, when, and what the readings did next.</dd></div>
+      <div><dt>Certified safety stays yours</dt><dd>Your safety systems and drive protection stay outside Tamoz and overrule it. It is not a safety component.</dd></div>
+      <div><dt>Separate from what it watches</dt><dd>It runs apart from the systems it monitors, so it notices when a drive or a sensor goes quiet.</dd></div>
+      <div><dt>A full record</dt><dd>Every reading, decision and step, in order. In our tests, every run replays bit for bit from its record.</dd></div>
     </dl>
   </div>
 </section>
 
 <section class="sec" id="use-cases">
   <div class="wrap">
-    <p class="eyebrow">Use cases</p>
-    <h2>One agent for many kinds of equipment</h2>
-    <p class="intro">A new kind of site is added as configuration, without changing the core. Pick any example to watch it play out in the animation.</p>
+    <p class="eyebrow">Results</p>
+    <h2>Seven stories, graded against doing nothing</h2>
+    <p class="intro">Each story ran on up to 10 simulated days with the rules and a scripted stand-in for the AI: 113 of 113 runs passed. Then the live AI, a commercial language model, ran three days of each fault story, and every story passed, 3 of 3. Every run is graded against doing nothing and four simple rules, including a plain vibration alarm.<a class="ref" href="#sources">4</a> The animation replays one day; each button opens the moment in it that shows the same skill. The grade is the simulator's cost score, in equivalent production hours: tonnes not delivered, a stranded belt, protective trips, drive wear and needless stops each carry a weight. It is not a measured saving.</p>
     <div class="cases">
-      <article class="case wide"><canvas data-zone="0" aria-hidden="true"></canvas><h3>Pig and poultry barns</h3><p>When ventilation fails, animals can die within hours. Tamoz follows temperature, CO₂ and fan current, alerts people in order and opens emergency vents if you've approved that action.</p><button type="button" data-jump="0">Watch the barn</button></article>
-      <article class="case"><canvas data-zone="1" aria-hidden="true"></canvas><h3>Fish farms</h3><p>Oxygen can fall fast overnight. Tamoz starts aerators within set limits and confirms the pond recovers.</p><button type="button" data-jump="1">Watch the pond</button></article>
-      <article class="case"><canvas data-zone="2" aria-hidden="true"></canvas><h3>EV charging networks</h3><p>A Techniche study of 5,000 chargers found 70% of malfunctions could be fixed remotely.<a class="ref" href="#sources">5</a> Tamoz restarts within limits and sends a technician only when needed.</p><button type="button" data-jump="2">Watch the charger</button></article>
-      <article class="case"><canvas data-zone="3" aria-hidden="true"></canvas><h3>Data centres</h3><p>Germany's Energy Efficiency Act sets efficiency targets for existing sites from mid-2027.<a class="ref" href="#sources">6</a> Tamoz connects slow cooling trends and raises them before an alarm fires.</p><button type="button" data-jump="3">Watch the chiller</button></article>
-      <article class="case"><canvas data-zone="4" aria-hidden="true"></canvas><h3>Water and heating utilities</h3><p>Few people cover the night. Tamoz separates real faults from lost links, refuses to act on missing data and calls the on-call technician.</p><button type="button" data-jump="4">Watch the pump station</button></article>
-      <article class="case"><canvas data-zone="5" aria-hidden="true"></canvas><h3>Supermarkets and cold storage</h3><p>Open doors and deliveries set off alarms that aren't faults. Tamoz checks the door, the compressor and the schedule before anyone gets a call.</p><button type="button" data-jump="5">Watch the cold room</button></article>
-      <article class="case wide"><canvas data-zone="6" aria-hidden="true"></canvas><h3>Pharma cold chain</h3><p>Most temperature alerts turn out not to be true excursions.<a class="ref" href="#sources">4</a> Tamoz checks each one, compares loggers and drafts the deviation report. Release or quarantine stays with your quality team.</p><button type="button" data-jump="6">Watch the reefer</button></article>
+      <article class="case wide"><canvas data-zone="0" aria-hidden="true"></canvas><h3>Bearing failure, small drive margin</h3><p>D‑3's bearing dries out over hours. Left alone, it trips, and the two healthy drives follow within two minutes. On the day in the animation, Tamoz flagged D‑3 4 h 49 min before its trip, emptied the belt and stopped D‑3 by plan 1 h 21 min before the trip. The line moved 47 t less than the same day with nobody acting (1,510 t against 1,557 t), and ended with a running belt instead of one stranded for 5 h 37 min. Rules alone: 10 of 10 days. Live AI: 3 of 3.<a class="ref" href="#sources">3</a></p><button type="button" data-jump="0">Watch D‑3 against its peers</button></article>
+      <article class="case"><canvas data-zone="5" aria-hidden="true"></canvas><h3>Sudden drive trip</h3><p>A drive trips under full load with no warning. On the small-margin plant, the other two have about two minutes. The live AI cut the feed within 14 s of the trip, 3 of 3. A rule that always runs at reduced feed scores the same here, so we count this story as easy.</p><button type="button" data-jump="5">Watch the limp feed</button></article>
+      <article class="case"><canvas data-zone="3" aria-hidden="true"></canvas><h3>Gearbox seizure</h3><p>Oil loss raises the drag on D‑3 until its gearbox locks and the belt stalls. Tamoz named D‑3 about half an hour after the oil loss began, and the belt carried at most 15 % of its load when the gearbox seized, so it never stalled loaded. Rules: 10 of 10. Live AI: 3 of 3.</p><button type="button" data-jump="3">Watch the belt run empty</button></article>
+      <article class="case"><canvas data-zone="2" aria-hidden="true"></canvas><h3>Frozen or silent sensor</h3><p>D‑3's vibration sensor freezes at a healthy value, or stops reporting, before its bearing starts to fail. Tamoz reported the sensor within about 15 minutes, then caught the bearing from the winding temperature. Rules: 10 of 10 each. Live AI: 3 of 3 each.</p><button type="button" data-jump="2">Watch the winding trend</button></article>
+      <article class="case"><canvas data-zone="6" aria-hidden="true"></canvas><h3>Feed surges and normal days</h3><p>A surge loads all three drives at once, and the feed swings through the day. That is not a failing drive. In 40 control runs: no alarm, no step. These ran with the rules and a scripted stand-in, not the live AI.</p><button type="button" data-jump="6">Watch a routine stop pass</button></article>
+      <article class="case"><canvas data-zone="1" aria-hidden="true"></canvas><h3>Lead drive lost</h3><p>D‑1, which sets the belt speed, trips. Where the plant hands the lead to D‑2, Tamoz saw it within 10–13 s and beat all five baselines. Where the plant stops the whole belt, nothing can prevent the stop, and Tamoz made no attempt to restart the loaded belt. Rules: 10 of 10. Live AI: 3 of 3.</p><button type="button" data-jump="1">Watch it decide not to act</button></article>
+      <article class="case wide"><canvas data-zone="4" aria-hidden="true"></canvas><h3>Bearing failure, large drive margin</h3><p>Here two drives can carry the belt alone, at 0.97 times their rating, but in our model they age 8.5 times faster, and a loaded belt may not restart after the next routine stop. Tamoz named the bearing 0.3–0.9 h after it began to fail, stopped D‑3 by plan and fed no more than two drives can restart, 54 %. Rules: 10 of 10 days, each scoring 1.0 to 3.2 equivalent production hours better than doing nothing. Live AI: 3 of 3.</p><button type="button" data-jump="4">Watch the planned stop</button></article>
     </div>
   </div>
 </section>
 
-<section class="sec sec-white" id="pilot">
+<section class="sec sec-white" id="roles">
+  <div class="wrap">
+    <p class="eyebrow">Who it's for</p>
+    <h2>Built for the people who own the belt</h2>
+    <dl class="facts roles">
+      <div><dt>Maintenance and reliability managers</dt><dd>A weakening drive shows up hours before its trip, with the evidence, the predicted time and a stop you can plan. Fewer night calls for things that can wait.</dd></div>
+      <div><dt>Control room and shift supervisors</dt><dd>One clear call when a drive is really failing, and silence when a surge or a routine stop is only that.</dd></div>
+      <div><dt>Operations and plant managers</dt><dd>Every drive event has an owner, an outcome and a timeline before the morning meeting, and a belt that can still restart.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec" id="pilot">
   <div class="wrap pilot">
     <div>
       <p class="eyebrow">Pilot</p>
-      <h2>Start with one site, beside your existing alarm</h2>
-      <p class="intro">Tamoz is in early development, and we're looking for our first pilot partners. A pilot reads your site without touching it until you've seen it work.</p>
+      <h2>Start with one conveyor, beside your existing systems</h2>
+      <p class="intro">Tamoz is in early development, and we're looking for our first pilot partners. A pilot only reads your plant until you've seen it work.</p>
       <h3 class="agree">What we agree before starting</h3>
       <ul class="ticks">
-        <li>It catches every drill at least as fast as your existing alarm</li>
-        <li>Fewer than one false alarm a week after tuning</li>
-        <li>Every alert ends with a confirmed recovery</li>
-        <li>No interference with your existing systems</li>
+        <li>It warns of every rehearsed drive fault at least as early as your existing alarms</li>
+        <li>Fewer than one false alarm a week after tuning, feed surges included</li>
+        <li>Every alert ends with a confirmed outcome</li>
+        <li>No changes to PLC logic or drive protection, and no interference with production</li>
         <li>Your data stays yours</li>
       </ul>
     </div>
     <ol class="phases">
-      <li><span>Up to 4 weeks</span><h3>Prepare</h3><p>Site visit, call list and thresholds. We model your site and rehearse failures in a simulator.</p></li>
-      <li><span>1 day</span><h3>Install</h3><p>Your electrician fits read-only sensors and a gateway with battery backup.</p></li>
+      <li><span>Up to 4 weeks</span><h3>Prepare</h3><p>Plant walk, drive ratings, signal list, call list and thresholds. We model your conveyor, including whether two drives can restart it loaded, and rehearse drive failures in a simulator.</p></li>
+      <li><span>A few days</span><h3>Connect</h3><p>A gateway reads the signals you choose, read-only, with your automation team and IT in the loop.</p></li>
       <li><span>About 6 weeks</span><h3>Shadow mode</h3><p>No alerts yet. Each week you get a report of what Tamoz would have told you.</p></li>
-      <li><span>3 months or more</span><h3>Live alerts</h3><p>Real alerts run in parallel with your alarm, with a monthly drill.</p></li>
-      <li><span>After the drills pass</span><h3>First action</h3><p>Add one approved action, such as opening emergency vents, wired by the equipment maker.</p></li>
+      <li><span>3 months or more</span><h3>Live alerts</h3><p>Real alerts run in parallel with your alarms, with a monthly drill.</p></li>
+      <li><span>After the drills pass</span><h3>First action</h3><p>Add one approved, reversible step, such as a reduced feed, wired by your automation partner.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="sec" id="faq">
+<section class="sec sec-white" id="faq">
   <div class="wrap">
     <p class="eyebrow">Questions</p>
-    <h2>What operators ask first</h2>
+    <h2>What conveyor teams ask first</h2>
     <dl class="faq">
-      <div><dt>Does Tamoz replace our alarm system?</dt><dd>No. Your required alarm and safety systems stay primary. Tamoz adds a layer that follows each case through to the outcome.</dd></div>
-      <div><dt>Do we need new sensors?</dt><dd>Often only a few. Tamoz reads what you already have and can add low-cost retrofits where needed, such as current clamps that prove a fan is really running.</dd></div>
-      <div><dt>Where does it run?</dt><dd>Off-site, on power and a network separate from your site. That's how a site that goes silent becomes a warning rather than a blind spot.</dd></div>
-      <div><dt>Can the AI change our setpoints?</dt><dd>No. It chooses from actions you've approved. Fixed rules and device firmware control how far each action goes.</dd></div>
-      <div><dt>Can it handle vibration or other high-frequency signals?</dt><dd>Not as raw waveforms. It works with values such as RMS and trends, so high-frequency data needs extraction at the edge or an existing condition-monitoring system upstream.</dd></div>
-      <div><dt>Who owns the data?</dt><dd>You do.</dd></div>
+      <div><dt>Does Tamoz replace SCADA, the drive inverters or our condition monitoring?</dt><dd>No. It sits above them, follows events to an outcome and hands work to the systems you already use.</dd></div>
+      <div><dt>How does it connect to our PLCs and drives?</dt><dd>Through an edge gateway in front of your equipment, which reads the signals you choose. It works with values such as vibration RMS, currents and temperature trends; spectral analysis stays at the edge or in your condition-monitoring system. We scope the protocols and network boundaries with your team during pilot preparation.</dd></div>
+      <div><dt>Can the AI stop a drive or the belt?</dt><dd>It can ask. Stopping the feeder, a drive or the belt needs a person's approval; in our simulated tests, an automated approver stood in. It never sets a drive's speed or torque. Pull-wire switches, interlocks, E-stops and the drives' own protection stay outside Tamoz and overrule it.</dd></div>
+      <div><dt>We already have condition monitoring. Why add this?</dt><dd>Tamoz uses its output. Condition monitoring tells you a drive is unhealthy. Tamoz decides when to stop it, empties the belt first and keeps the belt restartable on the drives you have left. On our test day, a plain vibration alarm stopped the failing drive 34 minutes later than Tamoz, and the simulator scored it 0.5 equivalent production hours worse.</dd></div>
+      <div><dt>What has been proven, and what hasn't?</dt><dd>Simulation only so far: a small, flat 60 m conveyor with three drives and synthetic engineering data, not a customer site. The rules ran up to 10 simulated days per story, the live AI three per fault story, and the normal-day and surge tests ran without the live AI. Alone, the AI first held back on the bearing story, 0 of 3, until the system around it named the symptom and woke it on new evidence; then 3 of 3. The trip prediction was tuned on the same simulated days it was judged on. No real conveyor has run this, and savings in a real operation have not been measured. A pilot is how we find out.</dd></div>
+      <div><dt>Where does it run, and who owns the data?</dt><dd>It runs separately from the systems it watches, and we agree hosting with your IT and OT teams. The data stays yours.</dd></div>
     </dl>
   </div>
 </section>
@@ -573,12 +609,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <section class="sec sec-night" id="contact">
   <div class="wrap contact">
     <div>
-      <h2>Have a site that can't wait until morning?</h2>
-      <p class="intro">Tell us what you run and who takes the alarm at 3 a.m. We'll tell you honestly whether a pilot makes sense.</p>
+      <h2>What happens on your belt when one drive drops out?</h2>
+      <p class="intro">Tell us what you run, how your drives share the load and who takes the alarm on the night shift. We'll tell you honestly whether a pilot makes sense.</p>
     </div>
     <form id="pilotForm" action="https://formspree.io/f/mjywbebj" method="POST">
-      <input type="hidden" name="_subject" value="Pilot request from tamoz-systems.com (homepage)">
-      <input type="hidden" name="page" value="homepage">
+      <input type="hidden" name="_subject" value="Pilot request from tamoz-systems.com (belt conveyors)">
+      <input type="hidden" name="page" value="conveyor">
       <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="two">
         <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
@@ -586,10 +622,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </div>
       <div class="two">
         <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
-        <div class="field"><label for="f-site">What do you run?</label>
-          <select id="f-site" name="site"><option>Pig or poultry barns</option><option>Fish farm</option><option>EV charging</option><option>Data centre</option><option>Water or heating utility</option><option>Supermarket or cold storage</option><option>Pharma cold chain</option><option>Something else</option></select></div>
+        <div class="field"><label for="f-site">Where would you start?</label>
+          <select id="f-site" name="site"><option>A multi-drive conveyor</option><option>Drive trips we can't explain</option><option>Bearing or gearbox failures</option><option>Belts that are hard to restart loaded</option><option>Sensors we don't trust</option><option>False alarms from feed surges</option><option>A single-drive conveyor</option><option>Something else</option></select></div>
       </div>
-      <div class="field"><label for="f-msg">What happens when an alarm goes off today?</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
+      <div class="field"><label for="f-msg">What happens today when a conveyor drive trips?</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
       <button class="btn" type="submit">Request a pilot</button>
       <p class="form-status" id="formStatus" role="status" hidden></p>
     </form>
@@ -602,17 +638,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <section id="sources" aria-label="Sources">
       <h2>Sources</h2>
       <ol>
-        <li><a href="https://www.topagrar.com/schwein/news/mitarbeiter-der-van-asten-tierzucht-vor-gericht-wegen-2000-toter-schweine-d-13540284.html">top agrar, trial opening</a> and <a href="https://www.volksstimme.de/panorama/tod-von-2000-schweinen-gericht-behalt-sich-geldstrafe-vor-3751759">Volksstimme, court outcome</a></li>
-        <li><a href="https://www.nbcnews.com/news/amp/ncna962341">NBC News on the University Hospitals tank failure</a></li>
-        <li><a href="https://www.itv.com/news/central/2022-04-28/company-fined-44k-after-27000-chickens-die-due-to-ventilation-failure">ITV News, April 2022</a></li>
-        <li><a href="https://www.elpro.com/en/learn/documenting-temperature-excursions">ELPRO, documenting temperature excursions</a></li>
-        <li><a href="https://www.electronicspecifier.com/industries/automotive/techniche-s-study-highlights-prevalent-problems-for-ev-charging/">Electronic Specifier on the Techniche study</a></li>
-        <li><a href="https://www.cloudmagazin.com/en/2026/07/06/enefg-amendment-eases-data-center-efficiency-rules/">cloudmagazin on the EnEfG amendment, July 2026</a></li>
+        <li><a href="https://assets.new.siemens.com/siemens/assets/api/uuid:1b43afb5-2d07-47f7-9eb7-893fe7d0bc59/TCOD-2024_original.pdf">Siemens, The True Cost of Downtime 2024</a></li>
+        <li><a href="https://d1-live.emerson.com/documents/automation/article-alarm-management-by-numbers-deltav-en-38292.pdf">Emerson, Alarm Management by the Numbers</a></li>
+        <li><a href="https://ghassan-alhamoud.com/projects/tamoz-belt-conveyor.html">Tamoz on a simulated belt conveyor</a></li>
+        <li><a href="https://github.com/ghassan-ai-projects/streams-simulator/blob/belt-m4-evidence/docs/belt-conveyor-drives/WEBSITE.md">Streams Simulator, belt conveyor drives: what, why, data and evidence</a></li>
       </ol>
     </section>
     <div class="foot-end">
       <a class="logo" href="#top" aria-label="Tamoz, back to top"><svg role="img" aria-hidden="true"><use href="#tamoz-logo"/></svg></a>
-      <p>The night shown in the animation is an example. Its scenarios and readings are illustrative.</p>
+      <p>The day shown in the animation is one simulated test day, replayed from its record: its times, readings and decisions are from that run. The plant is a small, flat 60 m conveyor with synthetic engineering data, not a customer site. In the tests, approvals were automated.</p>
     </div>
   </div>
 </footer>
@@ -626,112 +660,169 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   const lerp = (a, b, t) => a + (b - a) * t;
   const TAU = Math.PI * 2;
   const rng = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const hash = (n, k) => { let t = (n * 374761393 + k * 668265263) | 0; t = Math.imul(t ^ t >>> 13, 1274126177); return ((t ^ t >>> 16) >>> 0) / 4294967296; };
   const hx = h => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
   const toHex = a => '#' + a.map(v => clamp(Math.round(v), 0, 255).toString(16).padStart(2, '0')).join('');
   const rgba = (h, a) => { const c = hx(h); return `rgba(${c[0]},${c[1]},${c[2]},${a})`; };
+  const nb = s => s.replace(/\b([DF])-(\d)/g, '$1\u2011$2');
+  const mix = (a, b, t) => { const p = hx(a), q = hx(b); return toHex(p.map((v, i) => lerp(v, q[i], t))); };
 
-  const COL = { alarm: '#ff6347', lantern: '#ffc857', clear: '#7df2c6', silent: '#a7b3c8', ink: '#eaf0f9', lit: '#ffcf8a', cold: '#d8f2ff' };
+  /* ---------- colours: every colour is a token on :root (--alarm … and --w-*), read once here ---------- */
+  const ROOT = getComputedStyle(document.documentElement);
+  const tok = (name, fb) => { const v = ROOT.getPropertyValue(name).trim(); return /^#[0-9a-f]{6}$/i.test(v) ? v : fb; };
+  const COL = { alarm: tok('--alarm', '#ff6347'), lantern: tok('--lantern', '#ffc857'), clear: tok('--clear', '#7df2c6'), silent: tok('--silent', '#a7b3c8'), ink: tok('--ink', '#eaf0f9'), night: tok('--night', '#0a1224'), lit: tok('--w-lit', '#ffcf8a'), cold: tok('--w-cold', '#d8f2ff') };
   const STCOL = { normal: COL.clear, alarm: COL.alarm, check: COL.lantern, wait: COL.lantern, silent: COL.silent, ok: COL.clear };
+  const W = {};
+  Object.entries({
+    skytop: '#0a1224', skytopdawn: '#34477a', skylow: '#14243f', skylowdawn: '#c9958d', star: '#e8f0ff',
+    edge: '#0d1a23', edge2: '#142631', ground: '#1c3a3f', ground2: '#21444a', ground3: '#1b363d', grid: '#bfe0e6',
+    pad: '#26383f', yard: '#27384a', yard2: '#22313f', road: '#121e2e', roadline: '#4a5f7c',
+    pond: '#143a5e', pond2: '#0d2a49', bank: '#183237', shimmer: '#6fa6cc', island: '#2f4d4f', island2: '#37585a',
+    trunk: '#23252b', pine: '#16343b', pinelit: '#265056', leaf: '#1b3f43', leaflit: '#2b5a5c', pole: '#4c5d78',
+    car1: '#4a6d8f', car2: '#8a5a4a', car3: '#b4bfd0', glass: '#6b7d99', truck: '#c79a3f',
+    wall: '#62739a', house: '#55668a', roof: '#5e4640', mullion: '#28334a', concrete: '#5a677a',
+    steel: '#8796ad', steeldark: '#4a586f', belt: '#1a222e', beltedge: '#3a4658', beltmark: '#7f8ea6',
+    ore: '#8a6f4d', orelit: '#c09a68', hopper: '#74849c', chute: '#5f7088',
+    motor: '#5e7192', gear: '#7a8aa3', guard: '#c79a3f', sensor: '#c3d0e2',
+    tower: '#9aa9bf', band: '#3b4a60', band2: '#566880', cap: '#c3d0e2', head: '#36465c', headtop: '#4f6079', spire: '#71829c'
+  }).forEach(([k, fb]) => { W[k] = tok('--w-' + k, fb); });
 
-  /* ---------- the night: every event is an example scenario ---------- */
+  /* ---------- the plant: B-1 runs from the tail (front-left) to the head (back-right) ---------- */
+  const BX0 = 16.4, BX1 = 17.6, BXC = 17, BZ = 1.8, TAILY = 38.2, HEADY = 7, BL = TAILY - HEADY, BELT_V = 8.5;
+  const DRV = [{ y: HEADY }, { y: 9.6 }, { y: TAILY }];
+  const TOWER_AT = [28, 22], ELEC = [20.7, 22.85, 1.9];
+
+  /* ---------- the test day: every time, reading and decision is from one replayed simulated run ---------- */
   const CH = [
-    { id: 'barn', name: 'Pig barn', power: 'Keeps going until the barn recovers', res: 'Two alerts, recovered', resSt: 'ok',
-      k: 'Compartment 4', a: [17.6, 36.3, 4.3], zoom: 2.2, unit: ' °C', dp: 1, limit: 28, wob: .08, L: 16.5,
-      curve: [[0, 24.1], [1.4, 29.3], [8, 31.4], [10.6, 31.6], [13.2, 24.6], [16.5, 24.4]],
-      sub: l => l < 1.4 ? 'Fan 1.8 A' : l < 12.8 ? 'Fan 0 A · CO₂ rising' : 'Fan 1.8 A · CO₂ falling',
+    { id: 'peers', name: 'D-3 against its peers', power: 'Compares each drive with its peers', res: 'Watch set', resSt: 'check',
+      k: 'D-3 winding above peers', ov: ['0.0 K', 'D-3 stopped'], a: [19.6, 38.2, 2], zoom: 2.2, unit: ' K', dp: 1, wob: .02, L: 16.5,
+      curve: [[0, 0.0], [1.4, 0.0], [2.4, 0.1], [3.0, 0.5], [3.4, 1.0], [5.6, 2.0], [13.2, 2.0], [16.5, 4.2]],
+      sub: l => l < 3.4 ? 'Same current as D-1 and D-2' : l < 10.6 ? 'Same current · winding rising' : 'Watch set on vibration',
       lines: [
-        { at: 1.4, time: '02:14', st: 'alarm', ev: 'alarm', text: 'Compartment 4: fan current 0 A. 29.3 °C and rising.' },
-        { at: 3.4, time: '02:14', ev: 'wake', text: 'CO₂ is climbing too, so the sensor is right. Real fault.' },
-        { at: 5.6, time: '02:15', ev: 'call1', send: [8.5, 41.2, 1.6], ring: [8.5, 41.2, 2], text: 'Farmer alerted on Telegram. Reply: "on my way".' },
-        { at: 8.2, time: '02:30', ev: 'call2', send: [3, 33.8, 1.6], ring: [3, 33.8, 2], text: 'Still 31.4 °C after 15 minutes. Calling the next person.' },
-        { at: 10.6, time: '02:30', st: 'check', ev: 'act', send: true, text: 'Emergency vents opened. Pre-approved action.' },
-        { at: 13.2, time: '02:52', st: 'ok', ev: 'ok', text: '24.6 °C and the fan is running. Closed, every step on record.' }
+        { at: 1.4, time: '01:41', text: 'Sealed truth, hidden from Tamoz until grading: D-3\'s bearing starts losing its lubrication. Nothing shows yet.' },
+        { at: 3.4, time: '04:54', st: 'check', ev: 'alarm', text: 'Rules: D-3\'s winding is 1.0 K above D-1 and D-2 at the same current, and rising 1.2 K/h. The peers hold steady.' },
+        { at: 5.6, time: '05:32', ev: 'wake', text: 'AI woken. Now 2 K above, rising 1.9 K/h against 0.1 for the peers. A feed surge would lift all three. This is one drive.' },
+        { at: 8.2, time: '05:32', ev: 'note', text: 'Cause not clear yet, and the AI says so: "a drive degrading against its peers", confidence 0.8.' },
+        { at: 10.6, time: '05:32', st: 'check', ev: 'act', text: 'Watch set: wake the AI again if D-3\'s vibration gets 0.3 mm/s above its peers.' },
+        { at: 13.2, time: '05:32', st: 'check', ev: 'ok', text: 'Full feed stays on. Nothing to stop yet; the case stays open.' }
       ] },
-    { id: 'fish', name: 'Fish farm', power: 'Takes small actions inside fixed limits', res: 'Aerator on, recovered', resSt: 'ok',
-      k: 'Pond 3', a: [5.5, 26.6, 1.1], zoom: 2.5, unit: ' mg/l O₂', dp: 1, limit: 5, wob: .05, L: 10.5,
-      curve: [[0, 6.3], [1.2, 4.1], [5.2, 3.9], [7.6, 6.2], [10.5, 6.2]],
-      sub: l => l < 5.2 ? 'Aerator 2 off' : 'Aerator 2 on',
+    { id: 'bearing', name: 'Bearing named', power: 'Names a cause only when the evidence does', res: 'Full feed kept', resSt: 'check',
+      k: 'D-3 vibration above peers', ov: ['0.00 mm/s', 'D-3 stopped'], a: [18.5, 38.2, 1.6], ox: -170, zoom: 2.4, unit: ' mm/s', dp: 2, limit: .30, wob: .004, L: 10.5,
+      curve: [[0, 0.26], [1.2, 0.30], [7.6, 0.30], [10.5, 1.25]],
+      sub: l => l < 1.2 ? 'Watch at +0.30 mm/s' : 'Bearing named · full feed',
       lines: [
-        { at: 1.2, time: '02:58', st: 'alarm', ev: 'alarm', text: 'Pond 3: oxygen at 4.1 mg/l and falling, hours before sunrise.' },
-        { at: 3.2, time: '02:58', ev: 'wake', text: 'The trend hits the danger limit by 03:40. Real problem.' },
-        { at: 5.2, time: '02:59', st: 'check', ev: 'act', send: true, text: 'Aerator 2 started. Pre-approved, within set limits.' },
-        { at: 7.6, time: '03:18', st: 'ok', ev: 'ok', text: '6.2 mg/l and holding. Closed. Nobody woken.' }
+        { at: 1.2, time: '06:32', st: 'check', ev: 'alarm', text: 'Watch fired. D-3\'s vibration is 0.30 mm/s above the best peer, and its winding 4.7 K hotter, at the same current.' },
+        { at: 3.2, time: '06:32', ev: 'wake', text: 'Vibration and heat rising together on one drive: a dry bearing. The gearbox pattern doesn\'t fit.' },
+        { at: 5.2, time: '06:32', ev: 'note', text: 'The winding trend points to a trip in about 4.3 hours. Too early to give up tonnes.' },
+        { at: 7.6, time: '06:32', st: 'check', ev: 'ok', text: 'Bearing named, confidence 0.72. Full feed until the planned stop; the watch stays on.' }
       ] },
-    { id: 'ev', name: 'EV charging', power: 'Remembers how the last fault ended', res: 'Restarted remotely', resSt: 'ok',
-      k: 'Charger 4', a: [41, 15.2, 1.6], zoom: 2.6, unit: ' kW', dp: 0, wob: .9, L: 10.5,
-      curve: [[0, 148], [1.2, 0], [5.8, 0], [7.6, 150], [10.5, 150]],
-      sub: l => l < 1.2 ? 'Session running' : l < 7.2 ? 'Fault · driver waiting' : 'Session running',
+    { id: 'predict', name: 'Trip predicted', power: 'Says how long a drive has left', res: 'Trip in 1 h 33 min', resSt: 'alarm',
+      k: 'D-3 time to trip', ov: ['no prediction', 'D-3 stopped'], a: [20.7, 22.85, 2.2], ox: 90, zoom: 2.1, unit: ' h', dp: 2, limit: 1.55, wob: .004, L: 10.5,
+      curve: [[0, 4.30], [1.1, 4.30], [1.2, 1.55], [10.5, 1.55]],
+      sub: l => l < 1.2 ? 'Last prediction at 06:32' : l < 3.2 ? 'Plan: stop 1.5 h before the trip, plus 3 min to empty' : 'Trip predicted about 10:24',
       lines: [
-        { at: 1.2, time: '03:22', st: 'alarm', ev: 'alarm', text: 'Charger 4: fault code, session dropped, driver waiting.' },
-        { at: 3.2, time: '03:22', ev: 'wake', text: 'Same fault last month. A restart cleared it.' },
-        { at: 5.2, time: '03:23', st: 'check', ev: 'act', send: true, text: 'Remote restart sent. Allowed once per fault.' },
-        { at: 7.6, time: '03:26', st: 'ok', ev: 'ok', text: 'Session back at 150 kW. No technician needed.' }
+        { at: 1.2, time: '08:51', st: 'alarm', ev: 'alarm', text: 'D-3\'s winding is about 19 K above its peers and climbing 8.9 K/h. Its vibration is 1.76 mm/s above theirs.' },
+        { at: 3.2, time: '08:51', ev: 'wake', text: 'A curve fitted to the winding temperature: trip in 1 h 33 min, at about 10:24.' },
+        { at: 5.2, time: '08:51', ev: 'note', text: 'Inside the planning window: 1.5 h before the trip, plus 3 minutes to empty the belt. Time to act while three drives can still pull it.' },
+        { at: 7.6, time: '08:51', st: 'check', ev: 'ok', text: 'Graded afterwards: left alone, D-3 would have tripped at 10:21. The prediction was 3 minutes late.' }
       ] },
-    { id: 'data', name: 'Data centre', power: 'Connects slow trends before an alarm fires', res: 'Ticket for 08:00', resSt: 'check',
-      k: 'Chiller 2 supply air', a: [26.2, 3.9, 4.6], zoom: 2.3, unit: ' °C', dp: 1, limit: 24, wob: .02, L: 10.5,
-      curve: [[0, 20.1], [3, 21.3], [10.5, 21.4]],
-      sub: () => 'Alarm limit 24 °C · no alarm yet',
+    { id: 'empty', name: 'Belt emptied', power: 'Asks a person before stopping anything', res: 'Belt empty', resSt: 'ok',
+      k: 'Material on the belt', ov: ['1.25 t', '0.23 t'], a: [17, 22.6, 2.3], ox: -60, zoom: 1.35, tz: .6, wakeAt: 0, unit: ' t', dp: 2, wob: .004, L: 10.5,
+      curve: [[0, 1.25], [3.2, 1.25], [5.2, 0.36], [7.6, 0.00], [10.5, 0.00]],
+      sub: l => l < 3.2 ? 'Feeder 100 %' : l < 7.6 ? 'Feeder 0 % · running empty' : 'Belt empty',
       lines: [
-        { at: 1.2, time: '03:47', st: 'check', ev: 'alarm', text: 'Chiller 2: supply air up 1.2 °C in 6 hours. No alarm has fired.' },
-        { at: 3.2, time: '03:47', ev: 'wake', text: 'Same slow climb as before the last chiller failure.' },
-        { at: 5.2, time: '03:48', ev: 'act', text: 'No reason to wake anyone. Service ticket set for 08:00.' },
-        { at: 7.6, time: '03:48', ev: 'ok', text: 'Trend stays on watch until the ticket closes.' }
+        { at: 1.2, time: '08:51', st: 'check', ev: 'alarm', text: 'The AI asks to stop the feeder so the belt runs empty. A stopping step, so it waits for approval.' },
+        { at: 3.2, time: '08:54', ev: 'call1', send: ELEC, ring: ELEC, back: true, text: 'Approved, by the test\'s automated approver. Feeder set to 0 %.' },
+        { at: 5.2, time: '08:54', st: 'check', ev: 'act', send: true, text: 'The feeder reads back 0 %. A step counts only when the plant confirms it.' },
+        { at: 7.6, time: '08:58', st: 'ok', ev: 'ok', text: 'Belt empty. D-1, D-2 and D-3 still turn it at 2 m/s.' }
       ] },
-    { id: 'water', name: 'Water utility', power: 'Treats silence as a warning', res: 'Technician sent', resSt: 'ok',
-      k: 'Pump station 2', a: [12.3, 3.3, 2.1], ox: -66, zoom: 2.4, unit: ' l/s', dp: 0, wob: .5, L: 11, gap: [1.2, 8], noUp: true,
-      curve: [[0, 42], [1.2, 42], [8, 41], [11, 42]],
-      sub: l => l < 1.2 ? 'Pumps running' : l < 8 ? 'Last reading normal · state unknown' : 'Pumps running',
+    { id: 'stop', name: 'D-3 stopped by plan', power: 'Turns a trip into a planned stop', res: '1 h 21 min early', resSt: 'ok',
+      k: 'D-3 winding', ov: ['111 °C', '35 °C'], a: [17.7, 38.2, 1.4], ox: 155, zoom: 2.2, tz: .7, wakeAt: 0, unit: ' °C', dp: 0, limit: 150, wob: .2, L: 10.5,
+      curve: [[0, 131], [1.2, 131], [3.2, 123], [10.5, 123]],
+      sub: l => l < 3.2 ? 'Trip at 150 °C' : 'Stopped by plan · cooling',
       lines: [
-        { at: 1.2, time: '04:09', st: 'silent', ev: 'alarm', text: 'Pump station 2 stopped reporting. Last reading normal.' },
-        { at: 3.2, time: '04:14', ev: 'wake', text: 'Five minutes of silence counts as a warning. Storm nearby.' },
-        { at: 5.4, time: '04:14', ev: 'call', ring: [14.4, 16.5, 1], text: 'No remote action on missing data. On-call technician called.' },
-        { at: 8, time: '04:41', st: 'ok', ev: 'ok', text: 'Technician on site, link back, pumps running. Closed.' }
+        { at: 1.2, time: '08:57', st: 'check', ev: 'alarm', text: 'Cause confirmed, confidence 0.9. The AI asks to stop D-3 by plan, on the empty belt.' },
+        { at: 3.2, time: '09:00', ev: 'call1', send: ELEC, ring: ELEC, back: true, text: 'Approved, by the automated approver. D-3 stopped.' },
+        { at: 5.2, time: '09:00', st: 'check', ev: 'act', send: true, text: 'D-3 reads back stopped. D-1 and D-2 carry the empty belt.' },
+        { at: 7.6, time: '09:00', st: 'ok', ev: 'ok', text: 'Graded afterwards: stopped 1 h 21 min before its trip. A plain vibration alarm would have stopped it at 09:34.' }
       ] },
-    { id: 'cold', name: 'Supermarket cold room', power: 'Sorts real faults from alarm noise', res: 'False alarm', resSt: 'ok',
-      k: 'Cold room 2', a: [36, 37.3, 2.3], zoom: 2.4, unit: ' °C', dp: 1, limit: 6, wob: .04, L: 10.5,
-      curve: [[0, 4.1], [1.2, 8.1], [6.2, 8.3], [8, 4.2], [10.5, 4.1]],
-      sub: l => l < 6.2 ? 'Door open 6 min · compressor normal' : 'Door shut · compressor normal',
+    { id: 'limp', name: 'Two drives, limp feed', power: 'Keeps the belt producing on two drives', res: 'Feed 18 %', resSt: 'ok',
+      k: 'Feeder setpoint', ov: ['100 %', '18 %'], a: [17, 33.6, 3.6], zoom: 2.2, unit: ' %', dp: 0, limit: 18, wob: .1, L: 10.5,
+      curve: [[0, 0], [5.19, 0], [5.2, 18], [10.5, 18]],
+      sub: l => l < 5.2 ? 'Feeder 0 % · D-3 stopped' : 'Limp feed · two drives',
       lines: [
-        { at: 1.2, time: '04:38', st: 'alarm', ev: 'alarm', text: 'Cold room 2: 8.1 °C and rising. Alarm fired.' },
-        { at: 3.2, time: '04:38', ev: 'wake', st: 'check', text: 'Door open 6 min, compressor normal, delivery booked at bay 2.' },
-        { at: 5.2, time: '04:39', ev: 'door', text: 'Not a fault, so no call. Watching until it comes back down.' },
-        { at: 7.8, time: '05:05', st: 'ok', ev: 'ok', text: 'Door shut, 4.2 °C. Closed. Nobody woken.' }
+        { at: 1.2, time: '09:01', st: 'check', ev: 'alarm', text: 'D-3 is cooling, falling 2.2 K/h. D-1 and D-2 share the load evenly.' },
+        { at: 3.2, time: '09:01', ev: 'wake', text: 'The AI asks for the limp feed: as much as two drives can carry and still restart the belt.' },
+        { at: 5.2, time: '09:03', st: 'check', ev: 'act', send: true, text: 'Feeder set to 18 % and read back at 18 %.' },
+        { at: 7.6, time: '09:30', st: 'ok', ev: 'ok', text: 'The belt keeps producing on two drives. D-3 is down to 47 °C.' }
       ] },
-    { id: 'pharma', name: 'Pharma cold chain', power: 'Leaves risky decisions to people', res: 'Waiting for QA signature', resSt: 'wait',
-      k: 'Reefer 7731', a: [42, 31.9, 1.9], zoom: 2.5, unit: ' °C', dp: 1, limit: 8, wob: .03, L: 10.5,
-      curve: [[0, 5.1], [1.2, 8.4], [7.2, 8.4], [10.5, 7.2]],
-      sub: l => l < 7.2 ? 'Load limit 2–8 °C' : 'Release or quarantine?',
+    { id: 'restart', name: 'Routine stop, clean restart', power: 'Leaves a routine stop alone', res: 'Restarted', resSt: 'ok',
+      k: 'Belt speed', ov: ['2.0 m/s', '2.0 m/s'], a: [17.7, 12, 1.2], ox: 90, zoom: 2, unit: ' m/s', dp: 1, wob: .004, L: 10.5, noUp: true,
+      curve: [[0, 2.0], [1.1, 2.0], [1.2, 0.0], [5.2, 0.0], [7.6, 2.0], [10.5, 2.0]],
+      sub: l => l < 1.2 ? 'Downstream permit on' : l < 5.2 ? 'Routine stop · 226 kg on the belt' : 'Restarted on two drives',
       lines: [
-        { at: 1.2, time: '05:21', st: 'alarm', ev: 'alarm', text: 'Reefer 7731: 8.4 °C for 11 min on a 2–8 °C load.' },
-        { at: 3.2, time: '05:21', ev: 'wake', text: 'A second logger agrees. Real excursion.' },
-        { at: 5.2, time: '05:23', st: 'check', ev: 'act', text: 'Deviation report drafted, evidence attached.' },
-        { at: 7.2, time: '05:23', st: 'wait', ev: 'wait', send: true, text: 'Release or quarantine is a human call. Waiting for QA to sign.' }
+        { at: 1.2, time: '12:25', ev: 'alarm', text: 'Routine stop downstream. The belt halts with 226 kg on it.' },
+        { at: 3.2, time: '12:25', ev: 'note', text: 'A planned stop, not a fault. No alarm, and no call to the AI.' },
+        { at: 5.2, time: '12:55', ev: 'act', text: 'Run permit back. D-1 and D-2 start the light belt.' },
+        { at: 7.6, time: '12:56', st: 'ok', ev: 'ok', text: 'Belt back at 2 m/s. No drive tripped all day, and the belt never stranded.' }
       ] }
   ];
-  const [BARN, FISH, EV, DATA, WATER, COLD, PHARMA] = CH.map((_, i) => i);
+  const [PEERS, BEARING, PREDICT, EMPTY, STOP, LIMP, RESTART] = CH.map((_, i) => i);
 
   const INTRO = 5, DAWN = 9;
   let cursor = INTRO;
   CH.forEach(c => { c.start = cursor; c.end = cursor + c.L; cursor = c.end; c.evs = {}; c.lines.forEach(l => { if (l.ev) c.evs[l.ev] = l.at; }); });
   const DAWN_AT = cursor, TOTAL = cursor + DAWN;
-  CH[COLD].evs.doorShut = 6.2;
-  CH[BARN].evs.fanBack = 12.8;
+  // plant moments, in seconds of animation
+  const EV = {
+    warm: CH[PEERS].start + 3.4, warmer: CH[BEARING].start + 1.2, hot: CH[PREDICT].start + 1.2,
+    feedOff: CH[EMPTY].start + 3.2, isolate: CH[STOP].start + 3.2, limp: CH[LIMP].start + 5.2,
+    halt: CH[RESTART].start + 1.2, permit: CH[RESTART].start + 5.2
+  };
 
   // clock keyframes, in minutes after midnight
   const mins = s => +s.slice(0, 2) * 60 + +s.slice(3);
-  const CLOCK = [[0, mins('01:58')]];
+  const CLOCK = [[0, mins('00:00')]];
   CH.forEach(c => c.lines.forEach(l => CLOCK.push([c.start + l.at, mins(l.time)])));
-  CLOCK.push([DAWN_AT + 3, mins('06:00')], [TOTAL, mins('06:00')]);
+  CLOCK.push([DAWN_AT + 3, mins('16:00')], [TOTAL, mins('16:00')]);
   const clockAt = t => { for (let i = 1; i < CLOCK.length; i++) if (t <= CLOCK[i][0]) { const a = CLOCK[i - 1], b = CLOCK[i]; return lerp(a[1], b[1], clamp((t - a[0]) / Math.max(.001, b[0] - a[0]))); } return CLOCK[CLOCK.length - 1][1]; };
+
+  /* ---------- belt motion: feeder, belt speed and drive rotation, precomputed so any moment can be drawn ---------- */
+  const DT = .05, NSTEP = Math.ceil(TOTAL / DT) + 1;
+  const SIM = { pos: new Float64Array(NSTEP + 1), f: new Float64Array(NSTEP + 1), v: new Float64Array(NSTEP + 1), r: [0, 1, 2].map(() => new Float64Array(NSTEP + 1)), rot: [0, 1, 2].map(() => new Float64Array(NSTEP + 1)) };
+  (function precompute() {
+    const FEEDK = [[EV.feedOff, 0], [EV.limp, .18], [EV.halt, 0], [EV.permit, .18]], SPDK = [[EV.halt, 0], [EV.permit, 1]];
+    const level = (keys, t) => { let v = 1; for (const [at, lv] of keys) if (t >= at) v = lv; return v; };
+    const step = (x, target, rate) => x + clamp(target - x, -rate, rate);
+    let pos = 0, f = 1, v = 1; const rot = [0, 0, 0];
+    for (let k = 0; k <= NSTEP; k++) {
+      const t = k * DT;
+      if (k) { f = step(f, level(FEEDK, t), DT / .4); v = step(v, level(SPDK, t), DT / (t >= EV.permit ? 2.2 : .9)); pos += BELT_V * v * DT; }
+      SIM.pos[k] = pos; SIM.f[k] = f; SIM.v[k] = v;
+      const r = [v, v, v * (1 - ss((t - EV.isolate) / .8))];
+      for (let d = 0; d < 3; d++) { rot[d] += r[d] * DT * 9; SIM.r[d][k] = r[d]; SIM.rot[d][k] = rot[d]; }
+    }
+  })();
+  function simAt(t) {
+    const x = clamp(t / DT, 0, NSTEP - 1), i = Math.floor(x), u = x - i, at = a => lerp(a[i], a[i + 1], u);
+    return { pos: at(SIM.pos), f: at(SIM.f), v: at(SIM.v), r: SIM.r.map(at), rot: SIM.rot.map(at) };
+  }
+  // material keeps the feed rate it was loaded with: the belt fills, thins and empties from the tail
+  function feedAtPos(p) {
+    if (p <= 0) return 1;
+    let lo = 0, hi = NSTEP;
+    while (lo < hi) { const m = (lo + hi) >> 1; if (SIM.pos[m] < p) lo = m + 1; else hi = m; }
+    return SIM.f[lo];
+  }
 
   /* ---------- state ---------- */
   const vp = document.getElementById('vp'), cv = document.getElementById('world');
   let ctx = cv.getContext('2d');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let W = 0, H = 0, dpr = 1, T = 0, A = 0, D = 0, playing = !reduce, onScreen = true, dirty = true;
+  let W_ = 0, H = 0, dpr = 1, T = 0, A = 0, D = 0, playing = !reduce, onScreen = true, dirty = true, NOW = simAt(0);
   let free = { x: 0, y: 0, w: 1, h: 1 }, overviewZ = 10, phone = false;
   const cam = { x: 0, y: 22, z: 10 };
-  const beam = { x: 30, y: 22, r: 2.6, a: .2 };
+  const beam = { x: 22, y: 22, r: 2.6, a: .2 };
 
   const since = (i, name) => { const at = CH[i].evs[name]; return at === undefined ? -1e9 : T - CH[i].start - at; };
   const amt = (i, name, dur = 1) => ss(since(i, name) / dur);
@@ -739,6 +830,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   const stOf = i => { const l = localOf(i); let s = 'normal'; for (const ln of CH[i].lines) if (ln.st && l >= ln.at) s = ln.st; return s; };
   const pulse = (hz = 1.4) => .55 + .45 * Math.sin(A * TAU * hz);
   const curIdx = () => { for (let i = 0; i < CH.length; i++) if (T >= CH[i].start && T < CH[i].end) return i; return -1; };
+  // D-3's heat against its peers: amber from the first rule, red once the trip is predicted, dark once stopped
+  function heatD3(t = T) {
+    if (t >= EV.isolate) return heatD3(EV.isolate - .001) * (1 - ss((t - EV.isolate) / 4));
+    if (t < EV.warm) return 0;
+    if (t < EV.warmer) return .3 * ss((t - EV.warm) / (EV.warmer - EV.warm));
+    if (t < EV.hot) return .3 + .2 * ss((t - EV.warmer) / 2);
+    return .5 + .5 * ss((t - EV.hot) / 1.2);
+  }
+  const heatCol = h => mix(COL.lantern, COL.alarm, ss((h - .45) / .3));
 
   /* ---------- projection and paint ---------- */
   const PX = (x, y) => (x - y) * .866;
@@ -789,6 +889,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     ctx.fillStyle = g; ctx.fill();
     ctx.beginPath(); ctx.ellipse(cx, cy - hh, rx, ry, 0, 0, TAU); ctx.fillStyle = topFill || S(m.t); ctx.fill();
   }
+  // a disc standing in a plane of constant x (pulley ends, motor fan covers, the speed wheel), with turning spokes
+  function discX(X, y, z, r, fill, ang, spoke) {
+    const pts = []; for (let i = 0; i < 18; i++) { const a = i / 18 * TAU; pts.push(P(X, y + Math.cos(a) * r, z + Math.sin(a) * r / .9)); }
+    poly(pts, fill);
+    if (!spoke) return;
+    ctx.strokeStyle = spoke; ctx.lineWidth = .05; ctx.beginPath();
+    for (let k = 0; k < 3; k++) { const a = ang + k * TAU / 3, p = P(X, y, z), q = P(X, y + Math.cos(a) * r * .8, z + Math.sin(a) * r * .8 / .9); ctx.moveTo(p[0], p[1]); ctx.lineTo(q[0], q[1]); }
+    ctx.stroke();
+  }
   function gable(x, y, z, w, d, h, c) {
     const m = mat(c), o = .22;
     poly([P(x - o, y - o, z), P(x + w + o, y - o, z), P(x + w + o, y + d / 2, z + h), P(x - o, y + d / 2, z + h)], S(m.t));
@@ -809,25 +918,23 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
   /* ---------- static world layout ---------- */
   const SIZE = 44;
-  const ROADS = [[14, 14, 30, 14], [30, 14, 30, 30], [30, 30, 14, 30], [14, 30, 14, 14], [14, 14, 14, 3], [26, 14, 26, 10.4], [30, 16.5, 36, 16.5], [36, 16.5, 36, 28], [30, 28, 36.6, 28], [30, 30, 30, 33.6], [14, 30, 14, 33.6], [3, 32, 14, 32], [14, 22, 10, 22]];
-  const LAKE = (() => { const r = rng(7), pts = []; for (let i = 0; i < 30; i++) { const a = i / 30 * TAU, d = 5.9 + r() * .75 + Math.sin(a * 3 + 1) * .35; pts.push([22 + Math.cos(a) * d, 22 + Math.sin(a) * d]); } return pts; })();
-  const SHIM = (() => { const r = rng(11), s = []; for (let i = 0; i < 26; i++) { const a = r() * TAU, d = 2.6 + r() * 3; s.push([22 + Math.cos(a) * d, 22 + Math.sin(a) * d, r() * TAU, .25 + r() * .5]); } return s; })();
-  const LIGHTS = [[14.7, 14.7], [29.3, 14.7], [29.3, 29.3], [14.7, 29.3], [22, 14.7], [29.3, 22], [22, 29.3], [14.7, 22], [14.7, 8], [36.7, 22], [33, 15.8], [13.3, 31.3], [30.7, 32.4]];
-  const EXCLUDE = [[1, 1, 15.2, 15.2], [22, 1, 34.5, 11], [34.4, 9.4, 44, 20], [35.4, 21.5, 44, 34.6], [24.2, 33, 44, 44], [1, 30.2, 22, 44], [0, 14.6, 11.4, 29.8], [14.8, 14.8, 29.2, 29.2]];
+  const ROADS = [[23.2, 2, 23.2, 42], [2, 28, 23.2, 28], [23.2, 33, 35, 33]];
+  const LAKE = (() => { const r = rng(7), pts = []; for (let i = 0; i < 30; i++) { const a = i / 30 * TAU, d = 3.7 + r() * .5 + Math.sin(a * 3 + 1) * .3; pts.push([TOWER_AT[0] + Math.cos(a) * d, TOWER_AT[1] + Math.sin(a) * d]); } return pts; })();
+  const SHIM = (() => { const r = rng(11), s = []; for (let i = 0; i < 18; i++) { const a = r() * TAU, d = 2.4 + r() * 1.4; s.push([TOWER_AT[0] + Math.cos(a) * d, TOWER_AT[1] + Math.sin(a) * d, r() * TAU, .2 + r() * .4]); } return s; })();
+  const LIGHTS = [[23.9, 5.5], [23.9, 13.5], [23.9, 29.4], [23.9, 38.5], [12, 27.3], [5, 27.3], [21.6, 20.4], [26.6, 32.3], [33.4, 32.3], [19.9, 6.4]];
+  const EXCLUDE = [[14.4, .6, 22.4, 43.4], [10.6, 26.6, 16.2, 37.6], [23.4, 17.4, 32.8, 26.8], [24.4, 29, 36, 38]];
   const TREES = (() => {
     const r = rng(23), out = [];
     const onRoad = (x, y) => ROADS.some(([a, b, c, d]) => {
       const minx = Math.min(a, c) - 1.1, maxx = Math.max(a, c) + 1.1, miny = Math.min(b, d) - 1.1, maxy = Math.max(b, d) + 1.1;
       return x > minx && x < maxx && y > miny && y < maxy;
     });
-    for (let i = 0; i < 900 && out.length < 92; i++) {
+    for (let i = 0; i < 900 && out.length < 60; i++) {
       const x = 1 + r() * 42, y = 1 + r() * 42;
       if (EXCLUDE.some(e => x > e[0] && x < e[2] && y > e[1] && y < e[3]) || onRoad(x, y)) continue;
       if (out.some(t => Math.hypot(t[0] - x, t[1] - y) < 1.05)) continue;
       out.push([x, y, .62 + r() * .55, r() < .72 ? 0 : 1]);
     }
-    // inner ring verge, between the lake and the road
-    for (const a of [.3, 1.1, 2.0, 2.9, 3.7, 4.6, 5.5]) out.push([22 + Math.cos(a) * 9.5 * (Math.abs(Math.cos(a)) > .7 ? .85 : 1), 22 + Math.sin(a) * 9.5 * (Math.abs(Math.sin(a)) > .7 ? .85 : 1), .6 + (a % .3), 0]);
     return out;
   })();
   const WIN = (() => { const r = rng(41), a = []; for (let i = 0; i < 200; i++) a.push(r()); return a; })();
@@ -836,47 +943,39 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   /* ---------- ground ---------- */
   function drawGround() {
     const th = 2.1;
-    poly([P(0, SIZE, 0), P(SIZE, SIZE, 0), P(SIZE, SIZE, -th), P(0, SIZE, -th)], S('#0d1a23'));
-    poly([P(SIZE, 0, 0), P(SIZE, SIZE, 0), P(SIZE, SIZE, -th), P(SIZE, 0, -th)], S('#142631'));
+    poly([P(0, SIZE, 0), P(SIZE, SIZE, 0), P(SIZE, SIZE, -th), P(0, SIZE, -th)], S(W.edge));
+    poly([P(SIZE, 0, 0), P(SIZE, SIZE, 0), P(SIZE, SIZE, -th), P(SIZE, 0, -th)], S(W.edge2));
     const [ax, ay] = P(0, 0), [bx, by] = P(SIZE, SIZE);
     const gr = ctx.createLinearGradient(ax, ay, bx, by);
-    gr.addColorStop(0, S('#1c3a3f')); gr.addColorStop(.55, S('#21444a')); gr.addColorStop(1, S('#1b363d'));
+    gr.addColorStop(0, S(W.ground)); gr.addColorStop(.55, S(W.ground2)); gr.addColorStop(1, S(W.ground3));
     poly([P(0, 0), P(SIZE, 0), P(SIZE, SIZE), P(0, SIZE)], gr);
     // survey grid
-    ctx.strokeStyle = rgba('#bfe0e6', .045); ctx.lineWidth = .04; ctx.beginPath();
+    ctx.strokeStyle = rgba(W.grid, .045); ctx.lineWidth = .04; ctx.beginPath();
     for (let i = 2; i < SIZE; i += 2) { let a = P(i, 0), b = P(i, SIZE); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); a = P(0, i); b = P(SIZE, i); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
     ctx.stroke();
-    // fields
-    const field = (x, y, w, d, c, along) => {
-      qz(x, y, w, d, 0, S(c));
-      ctx.strokeStyle = S(toHex(hx(c).map(v => v * 1.2))); ctx.lineWidth = .07; ctx.beginPath();
-      if (along) for (let i = .4; i < d; i += .55) { const a = P(x, y + i), b = P(x + w, y + i); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
-      else for (let i = .4; i < w; i += .55) { const a = P(x + i, y), b = P(x + i, y + d); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
-      ctx.stroke();
-    };
-    field(13.5, 40.2, 9.7, 3.3, '#2c4a3a', false);
-    field(.8, 37.2, 4, 6, '#35503a', true);
-    field(16, 1.2, 5.3, 8.5, '#2a4a40', true);
-    // pads
-    qz(3, 3, 11, 11, 0, S('#26383f')); qz(22.6, 1.6, 11.2, 8.6, 0, S('#27384a'));
-    qz(35, 10, 8.4, 9.4, 0, S('#22313f')); qz(36.6, 22.4, 7, 11.6, 0, S('#2c3a48'));
-    qz(24.6, 33.6, 12, 10, 0, S('#222f40')); qz(36, 34, 7.2, 8, 0, S('#222f40'));
+    // conveyor corridor, tipping yard, staff parking
+    qz(14.8, .8, 7.8, 40.2, 0, S(W.pad));
+    qz(10.8, 26.8, 5.4, 10.6, 0, S(W.yard));
+    qz(24.6, 29.6, 10.6, 7.6, 0, S(W.yard2));
+    ctx.strokeStyle = S(W.roadline); ctx.lineWidth = .05; ctx.beginPath();
+    for (let x = 28.4; x < 35; x += 1.2) { const p = P(x, 34.6), q = P(x, 36.1); ctx.moveTo(p[0], p[1]); ctx.lineTo(q[0], q[1]); }
+    ctx.stroke();
     // roads
     for (const [a, b, c, d] of ROADS) {
       const horiz = b === d, hw = .55;
       const x0 = Math.min(a, c) - (horiz ? 0 : hw), x1 = Math.max(a, c) + (horiz ? 0 : hw), y0 = Math.min(b, d) - (horiz ? hw : 0), y1 = Math.max(b, d) + (horiz ? hw : 0);
-      qz(x0, y0, x1 - x0, y1 - y0, 0, S('#121e2e'));
+      qz(x0, y0, x1 - x0, y1 - y0, 0, S(W.road));
     }
-    ctx.strokeStyle = S('#4a5f7c'); ctx.lineWidth = .06; ctx.setLineDash([.5, .62]); ctx.beginPath();
+    ctx.strokeStyle = S(W.roadline); ctx.lineWidth = .06; ctx.setLineDash([.5, .62]); ctx.beginPath();
     for (const [a, b, c, d] of ROADS) { const p = P(a, b), q = P(c, d); ctx.moveTo(p[0], p[1]); ctx.lineTo(q[0], q[1]); }
     ctx.stroke(); ctx.setLineDash([]);
-    // lake
-    poly(LAKE.map(([x, y]) => P(x + .28, y + .28)), S('#183237'));
+    // pond around the lantern mast
+    poly(LAKE.map(([x, y]) => P(x + .28, y + .28)), S(W.bank));
     const lk = LAKE.map(([x, y]) => P(x, y));
-    const lg = ctx.createLinearGradient(lk[22][0], lk[22][1] - 8, lk[7][0], lk[7][1] + 2);
-    lg.addColorStop(0, S('#143a5e')); lg.addColorStop(1, S('#0d2a49'));
+    const lg = ctx.createLinearGradient(lk[22][0], lk[22][1] - 5, lk[7][0], lk[7][1] + 2);
+    lg.addColorStop(0, S(W.pond)); lg.addColorStop(1, S(W.pond2));
     poly(lk, lg);
-    ctx.strokeStyle = S('#6fa6cc'); ctx.lineWidth = .055;
+    ctx.strokeStyle = S(W.shimmer); ctx.lineWidth = .055;
     for (const [x, y, ph, w] of SHIM) {
       const al = .18 + .3 * (.5 + .5 * Math.sin(A * .9 + ph)), p = P(x, y); ctx.globalAlpha = al;
       ctx.beginPath(); ctx.moveTo(p[0] - w, p[1]); ctx.lineTo(p[0] + w, p[1]); ctx.stroke();
@@ -884,340 +983,267 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     ctx.globalAlpha = 1;
     // street light pools
     for (const [x, y] of LIGHTS) glow(x, y, 0, 3.1, COL.lit, .13 * night());
-    // state pool under each zone
+    // state pool under each chapter's anchor
     CH.forEach((c, i) => {
-      const st = stOf(i); if (st === 'normal' || st === 'ok') return;
+      const st = stOf(i); if (st === 'normal' || st === 'ok' || T < c.start || T >= c.end) return;
       const a = st === 'alarm' ? .3 * pulse() : st === 'silent' ? .08 : .15;
-      glow(c.a[0], c.a[1], 0, 7, STCOL[st], a);
+      glow(c.a[0], c.a[1], 0, 6, STCOL[st], a);
     });
   }
 
   /* ---------- small objects ---------- */
   function pine(x, y, s) {
     const b = P(x, y), t = P(x, y, 2.5 * s), w = .62 * s;
-    poly([[b[0] - .05, b[1]], [b[0] + .05, b[1]], [b[0] + .05, b[1] - .3], [b[0] - .05, b[1] - .3]], S('#23252b'));
-    poly([t, [b[0] - w, b[1] - .28 * s], [b[0], b[1] - .08 * s]], S('#16343b'));
-    poly([t, [b[0] + w, b[1] - .28 * s], [b[0], b[1] - .08 * s]], S('#265056'));
+    poly([[b[0] - .05, b[1]], [b[0] + .05, b[1]], [b[0] + .05, b[1] - .3], [b[0] - .05, b[1] - .3]], S(W.trunk));
+    poly([t, [b[0] - w, b[1] - .28 * s], [b[0], b[1] - .08 * s]], S(W.pine));
+    poly([t, [b[0] + w, b[1] - .28 * s], [b[0], b[1] - .08 * s]], S(W.pinelit));
   }
   function round(x, y, s) {
     const b = P(x, y);
-    poly([[b[0] - .06, b[1]], [b[0] + .06, b[1]], [b[0] + .06, b[1] - .5], [b[0] - .06, b[1] - .5]], S('#23252b'));
+    poly([[b[0] - .06, b[1]], [b[0] + .06, b[1]], [b[0] + .06, b[1] - .5], [b[0] - .06, b[1] - .5]], S(W.trunk));
     const cy = b[1] - 1 * s;
-    ctx.beginPath(); ctx.ellipse(b[0], cy, .72 * s, .72 * s, 0, 0, TAU); ctx.fillStyle = S('#1b3f43'); ctx.fill();
-    ctx.beginPath(); ctx.ellipse(b[0] + .17 * s, cy - .17 * s, .46 * s, .46 * s, 0, 0, TAU); ctx.fillStyle = S('#2b5a5c'); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(b[0], cy, .72 * s, .72 * s, 0, 0, TAU); ctx.fillStyle = S(W.leaf); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(b[0] + .17 * s, cy - .17 * s, .46 * s, .46 * s, 0, 0, TAU); ctx.fillStyle = S(W.leaflit); ctx.fill();
   }
   function lamp(x, y) {
     const a = P(x, y), b = P(x, y, 2.1);
-    ctx.strokeStyle = S('#4c5d78'); ctx.lineWidth = .07; ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke();
+    ctx.strokeStyle = S(W.pole); ctx.lineWidth = .07; ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke();
     glow(x, y, 2.1, .9, COL.lit, .8 * night());
     ctx.fillStyle = rgba(COL.lit, night()); ctx.beginPath(); ctx.arc(b[0], b[1], .09, 0, TAU); ctx.fill();
   }
   function car(x, y, c, along = 'y') {
-    if (along === 'y') { box(x, y, .15, .95, 1.9, .42, c); box(x + .08, y + .42, .57, .8, .95, .34, '#6b7d99'); }
-    else { box(x, y, .15, 1.9, .95, .42, c); box(x + .42, y + .08, .57, .95, .8, .34, '#6b7d99'); }
+    if (along === 'y') { box(x, y, .15, .95, 1.9, .42, c); box(x + .08, y + .42, .57, .8, .95, .34, W.glass); }
+    else { box(x, y, .15, 1.9, .95, .42, c); box(x + .42, y + .08, .57, .95, .8, .34, W.glass); }
   }
-  function house(x, y, litAmt, roof = '#5e4640') {
-    box(x, y, 0, 2.5, 2, 1.25, '#55668a');
-    const front = gable(x, y, 1.25, 2.5, 2, .8, roof);
-    poly([P(x + 2.5, y, 1.25), P(x + 2.5, y + 2, 1.25), P(x + 2.5, y + 1, 2.05)], S(mat('#55668a').r));
-    front();
-    const a = .12 + litAmt * .95;
-    for (const wx of [x + .35, x + 1.5]) qy(y + 2, wx, wx + .55, .45, 1, lit(a));
-    qx(x + 2.5, y + .7, y + 1.3, .45, 1, lit(a * .9));
-    if (litAmt > .01) glow(x + 1.2, y + 2.4, .7, 3.2, COL.lit, .32 * litAmt * night());
+  function winY(Y, x0, x1, z0, z1, n, a, seed = 0) {
+    const w = (x1 - x0) / n;
+    for (let i = 0; i < n; i++) {
+      const wx = x0 + i * w + w * .08, ww = w * .84;
+      qy(Y, wx, wx + ww, z0, z1, lit(a * (.72 + WIN[(i + seed) % 200] * .28)));
+      const mh = z0 + (z1 - z0) * (.3 + WIN[(i + seed + 40) % 200] * .4);
+      qy(Y, wx + ww * .25, wx + ww * .72, z0, mh, S(W.mullion));
+    }
   }
-  function fan(x, y, z, r, spin, stopped) {
-    cyl(x, y, z, r, .34, '#74839c', S('#111b2a'));
-    const [cx, cy] = P(x, y, z + .34), ang = stopped ? .6 : A * spin;
-    ctx.strokeStyle = S(stopped ? '#c8755f' : '#b6c6db'); ctx.lineWidth = .08; ctx.beginPath();
-    for (let i = 0; i < 2; i++) { const a = ang + i * Math.PI; ctx.moveTo(cx - Math.cos(a) * r, cy - Math.sin(a) * r * .58); ctx.lineTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r * .58); }
-    ctx.stroke();
+  function winX(X, y0, y1, z0, z1, n, a, seed = 0) {
+    const w = (y1 - y0) / n;
+    for (let i = 0; i < n; i++) qx(X, y0 + i * w + w * .08, y0 + i * w + w * .92, z0, z1, lit(a * (.72 + WIN[(i + seed) % 200] * .28)));
+  }
+  function office(x, y, litAmt) {
+    box(x, y, 0, 3.4, 2.2, 1.6, W.wall);
+    winY(y + 2.2, x + .25, x + 3.15, .6, 1.25, 4, .14 + litAmt * .9, 12);
+    winX(x + 3.4, y + .3, y + 1.9, .6, 1.25, 2, .14 + litAmt * .9, 17);
+    if (litAmt > .01) glow(x + 1.7, y + 2.6, .7, 3.4, COL.lit, .32 * litAmt * night());
   }
 
-  /* ---------- zones ---------- */
-  function drawBarn() {
-    const x0 = 6, y0 = 34, w = 14, d = 4.4, h = 2.3, st = stOf(BARN), al = st === 'alarm' ? 1 : st === 'check' ? .5 : 0;
-    // the next person drives over
-    const dr = ss((since(BARN, 'call2') - 1.2) / 3.2);
-    if (dr > 0) {
-      const u = dr * 11.9, cx = u < 10.5 ? 3 + u : 13.5, cy = u < 10.5 ? 31.55 : 31.55 + (u - 10.5);
-      box(cx, cy, .12, .9, .8, .42, '#a6b6cc');
-      glow(cx + .9, cy + .4, .3, 1.6, COL.lit, .7 * night());
+  /* ---------- B-1, the belt ---------- */
+  const densAt = s => feedAtPos(NOW.pos - s);
+  const SEGN = 8, SEGL = BL / SEGN, LUMP = .2;
+  function drawBeltSeg(k) {
+    const y1 = TAILY - k * SEGL, y0 = y1 - SEGL;
+    // idler stands
+    for (let y = Math.ceil(y0 / 2) * 2; y < y1; y += 2) {
+      if (y < HEADY + .6 || y > TAILY - .6) continue;
+      box(BX0 + .05, y - .08, 0, .16, .16, BZ - .3, W.steel);
+      box(BX1 - .21, y - .08, 0, .16, .16, BZ - .3, W.steel);
+      box(BX0 + .05, y - .08, BZ - .55, BX1 - BX0 - .1, .16, .12, W.steeldark);
     }
-    // silos
-    cyl(21.5, 35, 0, .85, 4.1, '#7a8aa3'); cyl(21.5, 37.2, 0, .85, 4.1, '#7a8aa3');
-    box(x0, y0, 0, w, d, h, '#7486a8');
-    const m = mat('#7486a8');
-    const front = gable(x0, y0, h, w, d, 1.5, '#6b4a42');
-    poly([P(x0 + w, y0, h), P(x0 + w, y0 + d, h), P(x0 + w, y0 + d / 2, h + 1.5)], S(m.r));
-    front();
-    // compartment seams on front wall
-    ctx.strokeStyle = S('#222d42'); ctx.lineWidth = .05; ctx.beginPath();
-    for (let i = 1; i < 6; i++) { const a = P(x0 + i * w / 6, y0 + d, 0), b = P(x0 + i * w / 6, y0 + d, h); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
+    // return strand and the near stringer
+    qz(BX0 + .15, y0, BX1 - BX0 - .3, SEGL, BZ - .62, S(W.belt));
+    qx(BX1 + .04, y0, y1, BZ - .36, BZ - .04, S(mat(W.steel).r));
+    // carrying strand, troughed: far wing, bed, moving marks, material, near wing
+    poly([P(BX0, y0, BZ), P(BX0, y1, BZ), P(BX0 - .1, y1, BZ + .24), P(BX0 - .1, y0, BZ + .24)], S(mat(W.beltedge).t));
+    qz(BX0, y0, BX1 - BX0, SEGL, BZ, S(W.belt));
+    ctx.strokeStyle = rgba(W.beltmark, .45 * night() + .1); ctx.lineWidth = .045; ctx.setLineDash([.35, .85]); ctx.lineDashOffset = (TAILY - y1) - NOW.pos;
+    ctx.beginPath();
+    for (const x of [BX0 + .14, BX1 - .14]) { const a = P(x, y1, BZ + .01), b = P(x, y0, BZ + .01); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
+    ctx.stroke(); ctx.setLineDash([]);
+    drawMaterial(y0, y1);
+    poly([P(BX1, y0, BZ), P(BX1, y1, BZ), P(BX1 + .1, y1, BZ + .24), P(BX1 + .1, y0, BZ + .24)], S(mat(W.beltedge).r));
+  }
+  function drawMaterial(y0, y1) {
+    const n = Math.ceil((y1 - y0) / .25), crest = [];
+    for (let i = 0; i <= n; i++) { const y = y0 + (y1 - y0) * i / n; crest.push([y, .36 * densAt(TAILY - y)]); }
+    if (crest.every(c => c[1] < .004)) return;
+    const m = mat(W.ore);
+    poly(crest.map(([y, h]) => P(BXC, y, BZ + h)).concat(crest.slice().reverse().map(([y]) => P(BX0 + .12, y, BZ + .03))), S(m.t));
+    poly(crest.map(([y, h]) => P(BXC, y, BZ + h)).concat(crest.slice().reverse().map(([y]) => P(BX1 - .12, y, BZ + .03))), S(m.r));
+    // lumps ride with the belt, so the load visibly moves, thins and returns sparse
+    const s0 = TAILY - y1, s1 = TAILY - y0;
+    ctx.fillStyle = S(W.orelit);
+    for (let q = Math.ceil((NOW.pos - s1) / LUMP); q <= Math.floor((NOW.pos - s0) / LUMP); q++) {
+      const d = feedAtPos(q * LUMP); if (hash(q, 1) > d * 1.15) continue;
+      const s = NOW.pos - q * LUMP, off = (hash(q, 2) - .5) * .62 * Math.max(d, .35), h = .36 * d * (1 - Math.abs(off) / .5);
+      const p = P(BXC + off, TAILY - s, BZ + Math.max(h, .02) + .03);
+      ctx.beginPath(); ctx.arc(p[0], p[1], .045 + hash(q, 3) * .045, 0, TAU); ctx.fill();
+    }
+  }
+  const pulley = (y, z = BZ - .2) => discX(BX1 + .03, y, z, .3, S(W.steeldark), -NOW.pos / .3, S(W.beltmark));
+  function drawTail() { pulley(TAILY); }
+  // F-1 feeder under the hopper, with a belt scale just after it
+  function drawFeeder() {
+    const f = NOW.f, m = mat(W.hopper), zb = BZ + .95, zt = BZ + 2.1;
+    for (const [x, y] of [[15.5, 33.3], [18.4, 33.3], [15.5, 36.2], [18.4, 36.2]]) box(x, y, 0, .14, .14, zt - .1, W.steel);
+    box(16.55, 33, BZ + .42, .9, 3.1, .26, W.chute);
+    ctx.strokeStyle = rgba(W.beltmark, .6 * night() + .15); ctx.lineWidth = .04; ctx.setLineDash([.25, .45]); ctx.lineDashOffset = -SIM_FEEDER();
+    { const a = P(17, 36.1, BZ + .69), b = P(17, 33, BZ + .69); ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke(); }
+    ctx.setLineDash([]);
+    if (f > .02) {
+      ctx.fillStyle = S(W.orelit);
+      for (let i = 0; i < 14; i++) {
+        const ph = (A * 2.4 + i / 14) % 1, p = P(BXC + (WIN[i] - .5) * .5 * Math.max(f, .4), 32.95 - ph * .12, BZ + .45 - ph * .42);
+        if (WIN[i + 120] > f * 1.4) continue;
+        ctx.beginPath(); ctx.arc(p[0], p[1], .04 + WIN[i + 20] * .04, 0, TAU); ctx.fill();
+      }
+    }
+    // the hopper: an open bin, seen from above
+    qz(15.4, 33.2, 3.2, 3.2, zt, S(W.belt));
+    qz(15.7, 33.5, 2.6, 2.6, zt - .1, S(mat(W.ore).r));
+    poly([P(17.6, 34, zb), P(17.6, 35.6, zb), P(18.6, 36.4, zt), P(18.6, 33.2, zt)], S(m.r));
+    poly([P(16.4, 35.6, zb), P(17.6, 35.6, zb), P(18.6, 36.4, zt), P(15.4, 36.4, zt)], S(m.l));
+    const st = f > .02 ? COL.clear : COL.silent, lp = P(18.7, 36.5, zt + .12);
+    ctx.fillStyle = rgba(st, .95); ctx.beginPath(); ctx.arc(lp[0], lp[1], .1, 0, TAU); ctx.fill();
+    glow(18.7, 36.5, zt + .12, 1.1, st, .5);
+    // belt scale
+    box(BX1 + .12, 30.3, BZ - .75, .3, .7, .55, W.sensor);
+    const sp = P(BX1 + .42, 30.65, BZ - .45);
+    ctx.fillStyle = rgba(COL.clear, Math.sin(A * 4) > .1 ? .95 : .3); ctx.beginPath(); ctx.arc(sp[0], sp[1], .05, 0, TAU); ctx.fill();
+  }
+  const SIM_FEEDER = () => NOW.f * 4 * A;
+  // a side tipper that keeps the hopper stocked: up the ramp, tip, back down, away
+  function drawTruck() {
+    const ph = A % 16;
+    // tipping deck and ramp
+    box(12.6, 33, 0, 3.4, 3.6, 3, W.concrete);
+    poly([P(13.7, 33, 3), P(15.1, 33, 3), P(15.1, 28.6, 0), P(13.7, 28.6, 0)], S(mat(W.concrete).t));
+    poly([P(15.1, 33, 0), P(15.1, 33, 3), P(15.1, 28.6, 0)], S(mat(W.concrete).r));
+    if (ph > 13) return;
+    const rampZ = y => clamp((y - 28.6) / 4.4) * 3;
+    let x = 14.4, y = 34.8, z = 3, along = 'y', tip = 0;
+    if (ph < 2.4) { along = 'x'; x = lerp(1.5, 14.4, ss(ph / 2.4)); y = 27.75; z = 0; }
+    else if (ph < 4.8) { y = lerp(27.9, 34.8, ss((ph - 2.4) / 2.4)); z = rampZ(y - 1.2); }
+    else if (ph < 8.6) tip = ss((ph - 4.8) / 1.2) * (1 - ss((ph - 7.6) / 1));
+    else if (ph < 10.6) { y = lerp(34.8, 27.9, ss((ph - 8.6) / 2)); z = rampZ(y - 1.2); }
+    else { along = 'x'; x = lerp(14.4, 1.5, ss((ph - 10.6) / 2.4)); y = 28.25; z = 0; }
+    if (along === 'x') { box(x - 1.2, y - .5, .12, 2.4, 1, .6, W.steeldark); box(x + .6, y - .5, .12, .7, 1, .9, W.truck); box(x - 1.2, y - .5, .72, 1.75, 1, .55, W.truck); glow(x + 1.5, y, .4, 1.6, COL.lit, .55 * night()); return; }
+    box(x - .5, y - 1.2, z + .12, 1, 2.45, .25, W.steeldark);
+    box(x - .5, y + 1.25, z + .12, 1, .7, .9, W.truck);
+    glow(x, y + 2.2, z + .4, 1.6, COL.lit, .5 * night());
+    // the bed turns about its +x edge, lifting the -x side
+    const th = tip * .95, X0 = x + .5, zb = z + .37;
+    const R = (px, h) => { const dx = px - X0; return [X0 + dx * Math.cos(th) + h * Math.sin(th), zb - dx * Math.sin(th) + h * Math.cos(th)]; };
+    const [ax, az] = R(x - .5, 0), [bx, bz] = R(X0, 0), [cx, cz] = R(X0, .55), [dx, dz] = R(x - .5, .55);
+    const yb0 = y - 1.2, yb1 = y + 1.15, m = mat(W.truck);
+    poly([P(dx, yb0, dz), P(cx, yb0, cz), P(cx, yb1, cz), P(dx, yb1, dz)], S(m.t));
+    poly([P(ax, yb1, az), P(bx, yb1, bz), P(cx, yb1, cz), P(dx, yb1, dz)], S(m.l));
+    poly([P(bx, yb0, bz), P(bx, yb1, bz), P(cx, yb1, cz), P(cx, yb0, cz)], S(m.r));
+    if (tip > .6) {
+      ctx.fillStyle = S(W.orelit);
+      for (let i = 0; i < 12; i++) { const u = (A * 1.8 + i / 12) % 1, p = P(cx + u * 1, lerp(yb0, yb1, WIN[i + 140]), cz - u * .6); ctx.beginPath(); ctx.arc(p[0], p[1], .05 + WIN[i + 160] * .05, 0, TAU); ctx.fill(); }
+    }
+  }
+  function drawHead() {
+    box(BX0 + .05, HEADY - .1, 0, .2, .2, BZ - .2, W.steel); box(BX1 - .25, HEADY - .1, 0, .2, .2, BZ - .2, W.steel);
+    pulley(HEADY);
+    // second drive pulley in the wrap behind the head, and the belt speed wheel on the return strand
+    discX(BX1 + .03, DRV[1].y, BZ - .95, .26, S(W.steeldark), -NOW.pos / .26, S(W.beltmark));
+    box(BX1 + .02, 11.6, BZ - 1.15, .2, .8, .35, W.sensor);
+    discX(BX1 + .24, 12, BZ - .8, .2, S(W.steeldark), -NOW.pos / .2, S(W.beltmark));
+  }
+  // the downstream transfer: chute onto the crusher house, which gives the run permit
+  function drawTransfer() {
+    const stopped = T >= EV.halt && T < EV.permit + 1.2 && T < DAWN_AT;
+    box(14.4, 1.4, 0, 4.2, 3.6, 1.3, W.wall);
+    const roof = gable(14.4, 1.4, 1.3, 4.2, 3.6, .7, W.roof); roof();
+    winX(18.6, 1.7, 4.7, .45, 1, 3, .75, 31);
+    box(16.4, 4.6, 1.1, 1.2, 2.5, .7, W.chute);
+    const bc = stopped ? COL.lantern : COL.clear, bp = P(18.2, 4.6, 1.75);
+    ctx.fillStyle = rgba(bc, stopped ? .55 + .45 * pulse(1.2) : .85); ctx.beginPath(); ctx.arc(bp[0], bp[1], .12, 0, TAU); ctx.fill();
+    glow(18.2, 4.6, 1.75, stopped ? 2.6 : 1.1, bc, stopped ? .7 : .4);
+  }
+  // a drive: plinth, gearbox, coupling guard, motor and fan cover; three sensors (current, winding, vibration); a status lamp
+  function drawDrive(d) {
+    const y = DRV[d].y, run = NOW.r[d], zb = BZ - .62, h = d === 2 ? heatD3() : 0, x = BX1;
+    box(x + .1, y - .7, 0, 2, 1.4, zb, W.concrete);
+    box(x + .18, y - .3, zb, .6, .6, .58, W.gear);
+    box(x + .78, y - .14, zb + .14, .26, .28, .3, W.guard);
+    box(x + 1.04, y - .3, zb, .92, .6, .6, h > .01 ? mix(W.motor, heatCol(h), h * .6) : W.motor);
+    ctx.strokeStyle = S(mat(W.motor).l); ctx.lineWidth = .03; ctx.beginPath();
+    for (let k = 1; k < 6; k++) { const a = P(x + 1.08, y - .3 + k * .1, zb + .6), b = P(x + 1.92, y - .3 + k * .1, zb + .6); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
     ctx.stroke();
-    // emergency vents
-    const open = amt(BARN, 'act', 1.1);
-    for (let i = 0; i < 6; i++) {
-      const vx = x0 + i * w / 6 + .35, vw = w / 6 - .7, hot = i >= 4;
-      qy(y0 + d, vx, vx + vw, .75, 1.75, S('#10192a'));
-      if (open > .01) { qy(y0 + d, vx, vx + vw, .75, 1.75, rgba(COL.clear, .16 * open)); }
-      for (let s = 0; s < 4; s++) {
-        const z = .85 + s * .24, flap = open * .28;
-        poly([P(vx, y0 + d, z), P(vx + vw, y0 + d, z), P(vx + vw, y0 + d + flap, z + .12 * (1 - open * .5)), P(vx, y0 + d + flap, z + .12 * (1 - open * .5))], S('#8596b1'));
-      }
-      if (!open && hot && al) qy(y0 + d, vx, vx + vw, .75, 1.75, rgba(COL.alarm, .12 * pulse()));
-    }
-    // airflow
-    const flow = open * (1 - ss((since(BARN, 'ok') - 2) / 2));
-    if (flow > .01) {
-      ctx.strokeStyle = rgba(COL.clear, .75 * flow); ctx.lineWidth = .07; ctx.setLineDash([.42, .5]); ctx.lineDashOffset = -A * 1.5;
-      ctx.beginPath();
-      for (let i = 0; i < 6; i++) for (let k = 0; k < 2; k++) {
-        const vx = x0 + i * w / 6 + .75 + k * .8, a = P(vx, y0 + d + .1, 1.25), b = P(vx + .4, y0 + d + 2.3, .55 + k * .2), m2 = P(vx + .1, y0 + d + 1.3, 1.35);
-        ctx.moveTo(a[0], a[1]); ctx.quadraticCurveTo(m2[0], m2[1], b[0], b[1]);
-      }
-      ctx.stroke(); ctx.setLineDash([]);
-    }
-    // roof fans; the last one serves compartment 4
-    const fanStop = since(BARN, 'alarm') > -1.3 && since(BARN, 'fanBack') < 0;
-    [2.2, 6, 9.8, 12.5].forEach((fx, i) => fan(x0 + fx, y0 + d / 2 + .1, h + 1.32, .46, 7 + i * .4, i === 3 && fanStop));
-    if (al) {
-      poly([P(x0 + 9.4, y0 + d, h), P(x0 + w, y0 + d, h), P(x0 + w, y0 + d / 2, h + 1.5), P(x0 + 9.4, y0 + d / 2, h + 1.5)], rgba(COL.alarm, (.14 + .28 * pulse()) * al));
-      glow(x0 + 12, y0 + d / 2, h + 1, 4.8, COL.alarm, .42 * pulse() * al);
-    }
-    // farmhouse and next-person house
-    house(7.4, 39.6, amt(BARN, 'call1', .8));
-    house(1.6, 32.9, amt(BARN, 'call2', .8), '#4e5468');
-  }
-  function drawFish() {
-    const ponds = [15.5, 20.1, 24.7], st = stOf(FISH);
-    ponds.forEach((y, i) => {
-      box(1.8, y - .2, 0, 7.4, 4.2, .34, '#4a5d6c');
-      qz(2.05, y, 6.9, 3.8, .35, S(i === 2 ? '#12375a' : '#123252'));
-      ctx.strokeStyle = S('#5f97bd'); ctx.lineWidth = .05;
-      for (let k = 0; k < 7; k++) {
-        const px = 3 + (WIN[k + i * 9] * 5), py = y + .5 + WIN[k + 20 + i * 9] * 2.8, p = P(px, py, .35);
-        ctx.globalAlpha = .18 + .25 * (.5 + .5 * Math.sin(A + k * 2 + i));
-        ctx.beginPath(); ctx.moveTo(p[0] - .28, p[1]); ctx.lineTo(p[0] + .28, p[1]); ctx.stroke();
-      }
-      ctx.globalAlpha = 1;
+    discX(x + 1.97, y, zb + .3, .22, S(W.steeldark), NOW.rot[d], S(run > .03 ? W.beltmark : W.steeldark));
+    [[x + .4, y - .08, zb + .58], [x + 1.4, y - .08, zb + .6], [x + 1.62, y + .36, zb]].forEach(([sx, sy, sz], k) => {
+      box(sx, sy, sz, .16, .16, k === 2 ? .2 : .1, W.sensor);
+      const p = P(sx + .08, sy + .08, sz + (k === 2 ? .3 : .2)), on = run > .03 && Math.sin(A * 5 + d * 2 + k * 1.7) > .2;
+      ctx.fillStyle = rgba(COL.clear, on ? .95 : .25); ctx.beginPath(); ctx.arc(p[0], p[1], .04, 0, TAU); ctx.fill();
     });
-    if (st === 'alarm') qz(2.05, 24.7, 6.9, 3.8, .35, rgba(COL.alarm, .1 + .2 * pulse()));
-    box(9.5, 19.2, 0, 1.6, 2.2, 1.3, '#59698a');
-    qy(21.4, 9.8, 10.8, .45, 1, lit(.75));
-    // aerator float
-    const on = amt(FISH, 'act', .8), ax = 5.5, ay = 26.6;
-    ell(ax, ay, .35, .85, S('#26465f'));
-    box(ax - .32, ay - .32, .35, .64, .64, .32, '#a7b6cb');
-    if (on > .01) {
-      for (let r = 0; r < 3; r++) { const u = (A * .55 + r / 3) % 1; ell(ax, ay, .36, .9 + u * 2.2, null, rgba(COL.clear, (1 - u) * .55 * on), .05); }
-      for (let i = 0; i < 18; i++) {
-        const ph = (A * 1.2 + WIN[i] * 5) % 1, a = i / 18 * TAU, rr = .4 + ph * 1.15, z = .6 + Math.sin(ph * Math.PI) * 1.05;
-        const p = P(ax + Math.cos(a) * rr, ay + Math.sin(a) * rr, z);
-        ctx.fillStyle = rgba(COL.cold, (1 - ph) * .85 * on); ctx.beginPath(); ctx.arc(p[0], p[1], .055, 0, TAU); ctx.fill();
-      }
-    }
+    if (h > .01) glow(x + 1.5, y, zb + .35, 1.4 + h * 1.8, heatCol(h), .6 * h * (.8 + .2 * pulse()));
+    // status lamp: green while running, the heat colour for D-3, dark once stopped
+    const lb = P(x + 1.95, y + .55, zb), lt = P(x + 1.95, y + .55, zb + 1.05);
+    ctx.strokeStyle = S(W.pole); ctx.lineWidth = .05; ctx.beginPath(); ctx.moveTo(lb[0], lb[1]); ctx.lineTo(lt[0], lt[1]); ctx.stroke();
+    const stopped = d === 2 && T >= EV.isolate, sc = stopped ? COL.silent : h > .01 ? heatCol(h) : COL.clear;
+    const a = stopped ? .3 : (h > .5 ? .55 + .45 * pulse(1.6) : 1) * (.35 + .65 * run);
+    ctx.fillStyle = rgba(sc, a); ctx.beginPath(); ctx.arc(lt[0], lt[1], .11, 0, TAU); ctx.fill();
+    glow(x + 1.95, y + .55, zb + 1.05, 1.2, sc, stopped ? .05 : .6 * a);
   }
-  function drawEV() {
-    box(36.2, 10.6, 0, 5.6, 2.8, 1.8, '#4b5c7c');
-    qy(13.4, 36.6, 41.4, .3, 1.35, lit(.88));
-    box(36.2, 10.6, 1.8, 5.6, 2.8, .22, '#74859f');
-    glow(39, 14.2, .2, 4, COL.lit, .26 * night());
-    const st = stOf(EV), col = st === 'alarm' ? COL.alarm : st === 'check' ? COL.lantern : COL.clear;
-    const xs = [36, 37.7, 39.4, 41.1];
-    xs.forEach((x, i) => {
-      box(x, 14.7, 0, .42, .42, 1.25, '#7e90aa');
-      const c = i === 3 ? col : COL.clear, a = i === 3 && st === 'alarm' ? .55 + .45 * pulse(2) : 1;
-      qy(15.12, x + .06, x + .36, .68, 1.1, rgba(c, a));
-      glow(x + .2, 15.12, .9, i === 3 ? 1.9 : .9, c, (i === 3 ? .6 : .32) * a);
-    });
-    // bays
-    ctx.strokeStyle = S('#6c7e9b'); ctx.lineWidth = .05; ctx.beginPath();
-    for (const x of [35.5, 37.2, 38.9, 40.6, 42.3]) { const a = P(x, 15.2), b = P(x, 18.8); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
+  // the electrical room with the three drive inverters
+  function drawElectrical() {
+    const ask = Math.max(amt(EMPTY, 'call1', .6) * (1 - amt(EMPTY, 'ok', 1)), amt(STOP, 'call1', .6) * (1 - amt(STOP, 'ok', 1)));
+    box(19.3, 21.4, 0, 2.8, 2.9, 1.8, W.wall);
+    winX(22.1, 21.7, 24, .7, 1.35, 3, .3 + .65 * ask, 7);
+    qy(24.3, 19.8, 20.6, 0, 1.25, lit(.55));
+    box(19.7, 21.8, 1.8, .7, .7, .3, W.steel); box(20.8, 21.8, 1.8, .7, .7, .3, W.steel);
+    if (ask > .01) glow(20.7, 24.6, .7, 3.4, COL.lit, .3 * ask * night());
+    // cable tray to the belt
+    ctx.strokeStyle = S(W.steeldark); ctx.lineWidth = .08; ctx.beginPath();
+    { const a = P(19.3, 22.8, 1.2), b = P(BX1 + .05, 22.8, 1.2); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
     ctx.stroke();
-    car(35.9, 16, '#4a6d8f'); car(39.3, 16, '#8a5a4a'); car(41, 16, '#d0d7e3');
-    // cable to charger 4
-    const a = P(41.3, 15.1, .9), b = P(41.45, 16.1, .5), c = st === 'alarm' ? COL.alarm : st === 'check' ? COL.lantern : COL.clear;
-    ctx.strokeStyle = c; ctx.lineWidth = .05; ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.quadraticCurveTo(a[0], b[1] + .2, b[0], b[1]); ctx.stroke();
-    if (st === 'ok' || localOf(EV) < 1.2) {
-      const u = (A * .8) % 1, p = [lerp(a[0], b[0], u), lerp(a[1], b[1], u)];
-      ctx.fillStyle = COL.clear; ctx.beginPath(); ctx.arc(p[0], p[1], .07, 0, TAU); ctx.fill();
-    }
-  }
-  function drawData() {
-    const x0 = 23, y0 = 2, w = 10, d = 7, h = 3.4;
-    box(x0, y0, 0, w, d, h, '#4c5c7c');
-    // server LEDs
-    const dot = (px, py) => { ctx.fillRect(px - .045, py - .045, .09, .09); };
-    for (let r = 0; r < 4; r++) for (let i = 0; i < 26; i++) {
-      const on = Math.sin(A * (1 + WIN[(r * 26 + i) % 200] * 3) + i) > -.2, wx = x0 + .4 + i * .36, p = P(wx, y0 + d, .7 + r * .6);
-      ctx.fillStyle = on ? rgba(WIN[i + r] > .86 ? COL.lantern : '#7fd4ff', .85 * night() + .15) : rgba('#7fd4ff', .1); dot(p[0], p[1]);
-    }
-    for (let r = 0; r < 4; r++) for (let i = 0; i < 17; i++) {
-      const on = Math.sin(A * (.8 + WIN[(r * 17 + i + 60) % 200] * 3) + i * 2) > -.2, p = P(x0 + w, y0 + .4 + i * .37, .7 + r * .6);
-      ctx.fillStyle = on ? rgba('#7fd4ff', .75 * night() + .15) : rgba('#7fd4ff', .08); dot(p[0], p[1]);
-    }
-    const st = stOf(DATA), flag = st === 'check';
-    for (let i = 0; i < 4; i++) {
-      const cx = x0 + .9 + i * 2.25, cy = y0 + .9;
-      box(cx, cy, h, 1.75, 1.75, .55, '#7a8aa3');
-      ell(cx + .87, cy + .87, h + .56, .55, S('#101a29'));
-      const [fx, fy] = P(cx + .87, cy + .87, h + .56), ang = A * (i === 1 && flag ? 2.2 : 7) + i;
-      ctx.strokeStyle = S('#b6c6db'); ctx.lineWidth = .06; ctx.beginPath(); ctx.moveTo(fx - Math.cos(ang) * .52, fy - Math.sin(ang) * .3); ctx.lineTo(fx + Math.cos(ang) * .52, fy + Math.sin(ang) * .3); ctx.stroke();
-      if (i === 1 && flag) { qz(cx, cy, 1.75, 1.75, h + .56, rgba(COL.lantern, .1 + .1 * pulse())); glow(cx + .87, cy + .87, h + .7, 3, COL.lantern, .35); }
-    }
-    box(x0 + 1, y0 + d + .15, 0, 2.6, .9, .9, '#3f4e6a');
-  }
-  const MAST = [12.9, 5.3];
-  function drawWater() {
-    const st = stOf(WATER), silent = st === 'silent';
-    const tank = (x, y, r, sp) => {
-      cyl(x, y, 0, r, .55, '#5a6b82', S('#122f4d'));
-      const [cx, cy] = P(x, y, .55);
-      ell(x, y, .55, r * .88, S('#17405f'));
-      const ang = A * sp;
-      ctx.strokeStyle = S('#c1d0e4'); ctx.lineWidth = .1; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + Math.cos(ang) * r * 1.2, cy + Math.sin(ang) * r * .7); ctx.stroke();
-      ell(x, y, .62, .24, S('#c1d0e4'));
-    };
-    tank(6.6, 5.9, 3.1, .17); tank(11.4, 11.4, 1.75, -.24);
-    box(3.2, 10.5, 0, 5.9, 3.1, .55, '#596a81');
-    qz(3.5, 10.8, 5.3, 2.5, .56, S('#123a5b'));
-    for (let i = 0; i < 14; i++) {
-      const ph = (A * .55 + WIN[i + 40]) % 1, p = P(3.8 + WIN[i] * 4.7, 11 + WIN[i + 20] * 2.1, .56);
-      ctx.fillStyle = rgba(COL.cold, (1 - ph) * .55); ctx.beginPath(); ctx.arc(p[0], p[1] - ph * .22, .05 + ph * .06, 0, TAU); ctx.fill();
-    }
-    box(11.2, 2.2, 0, 2, 2.3, 1.55, '#59698a');
-    qy(4.5, 11.6, 12.8, .5, 1.1, lit(silent ? .12 : .85));
-    // mast
-    const mb = P(MAST[0], MAST[1]), mt = P(MAST[0], MAST[1], 5.6);
-    ctx.strokeStyle = S('#8fa0b8'); ctx.lineWidth = .1; ctx.beginPath(); ctx.moveTo(mb[0], mb[1]); ctx.lineTo(mt[0], mt[1]); ctx.stroke();
-    ctx.lineWidth = .04; ctx.beginPath(); for (let i = 1; i < 6; i++) { const a = P(MAST[0], MAST[1], i), l = .25 - i * .025; ctx.moveTo(a[0] - l, a[1]); ctx.lineTo(a[0] + l, a[1]); } ctx.stroke();
-    const blink = silent ? .08 : (Math.sin(A * 3) > 0 ? 1 : .25);
-    glow(MAST[0], MAST[1], 5.6, 1, silent ? COL.silent : COL.alarm, .8 * blink);
-    if (!silent) { for (let r = 0; r < 2; r++) { const u = (A * .5 + r * .5) % 1; ctx.strokeStyle = rgba(COL.clear, (1 - u) * .32); ctx.lineWidth = .05; ctx.beginPath(); ctx.arc(mt[0], mt[1], .3 + u * 1.5, -2.5, -.6); ctx.stroke(); } }
-    // technician van
-    const van = ss((since(WATER, 'call') - .4) / 2.6);
-    if (van > 0) {
-      const vy = lerp(18, 6, van);
-      box(13.55, vy, .14, .85, 1.7, .78, '#c8d3e2');
-      if (Math.sin(A * 9) > 0) glow(13.95, vy + .8, 1.05, 1.5, COL.lantern, .95);
-      glow(13.95, vy - .1, .3, 2, COL.lit, .5 * night());
-    }
-  }
-  function drawMarket() {
-    const x0 = 25, y0 = 34, w = 11, d = 6.4, h = 2.6;
-    // cold room annex sits at the back right, part of the same volume
-    box(x0, y0, 0, w, d, h, '#4c5c7c');
-    qy(y0 + d, x0 + .5, x0 + w - .6, .25, 1.75, lit(.92));
-    ctx.fillStyle = rgba('#25324a', .9);
-    for (let i = 1; i < 9; i++) { const p = P(x0 + .5 + i * 1.1, y0 + d, .25), q = P(x0 + .5 + i * 1.1, y0 + d, 1.75); ctx.fillRect(p[0] - .03, q[1], .06, p[1] - q[1]); }
-    qy(y0 + d, x0 + 3, x0 + 8, 2, 2.42, rgba(COL.clear, .86 * night() + .1));
-    glow(x0 + 5.5, y0 + d + 1.3, .2, 7, COL.lit, .34 * night());
-    box(x0 + w - 1.6, y0 + .4, h, 1.1, 1.1, .4, '#8b9ab1'); box(x0 + 2, y0 + 1.6, h, 1.4, 1.1, .4, '#8b9ab1');
-    // dock
-    const op = ss(localOf(COLD) / .8) * (1 - ss((since(COLD, 'doorShut')) / .7));
-    qx(x0 + w, 35.6, 37.5, 0, 1.9, S('#6f7f99'));
-    qx(x0 + w, 35.8, 37.3, .05, 1.8, S('#1a2534'));
-    if (op > .01) {
-      qx(x0 + w, 35.8, 37.3, .05, 1.8, rgba(COL.cold, .9 * op));
-      poly([P(36, 35.8), P(36, 37.3), P(38.8, 37.8), P(38.8, 35.3)], rgba(COL.cold, .2 * op));
-      glow(36.4, 36.5, .7, 3.6, COL.cold, .45 * op);
-    }
-    // shutter lines when shut
-    if (op < .95) { ctx.strokeStyle = rgba('#8a9bb5', .9 * (1 - op)); ctx.lineWidth = .04; ctx.beginPath(); for (let z = .25; z < 1.8; z += .25) { const a = P(36, 35.8, z), b = P(36, 37.3, z); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); } ctx.stroke(); }
-    // truck at bay 2
-    box(36.35, 38.2, .35, 3.5, 1.65, 1.75, '#94a3b9');
-    box(39.9, 38.35, .2, 1.3, 1.4, 1.25, '#3f6d8a');
-    qx(41.2, 38.5, 39.6, .75, 1.2, S('#9cc4dc'));
-    glow(41.4, 39.1, .4, 1.7, COL.lit, .5 * night());
-    // car park
-    car(26.5, 41.3, '#6b7f96'); car(29.4, 41.3, '#8a5a4a'); car(33.2, 41.3, '#b4bfd0');
-    lamp(31.5, 42.9);
-  }
-  function drawYard() {
-    const cols = ['#2f7075', '#a07a33', '#8a4a38', '#33558a', '#54647a'];
-    const rows = [23, 24.5, 26, 29.3, 30.8];
-    rows.forEach((y, ri) => {
-      [37.1, 40.3].forEach((x, ci) => {
-        const n = 1 + Math.floor(WIN[ri * 2 + ci + 60] * 2.4);
-        for (let k = 0; k < n; k++) {
-          const c = cols[Math.floor(WIN[ri * 7 + ci * 3 + k + 80] * cols.length)];
-          box(x, y, k * 1.12, 3, 1.25, 1.12, c);
-          ctx.strokeStyle = 'rgba(0,0,0,.2)'; ctx.lineWidth = .03; ctx.beginPath();
-          for (let i = 1; i < 10; i++) { const a = P(x + i * .3, y + 1.25, k * 1.12), b = P(x + i * .3, y + 1.25, k * 1.12 + 1.12); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
-          ctx.stroke();
-        }
-      });
-    });
-    // the reefer, front row
-    box(40.3, 32.3, 0, 3, 1.25, 1.12, '#c0ccdc');
-    const st = stOf(PHARMA), c = STCOL[st];
-    qx(43.3, 32.5, 33.35, .2, .95, S('#2c3a4e'));
-    const a = st === 'alarm' ? .6 + .4 * pulse(2) : st === 'wait' ? .55 + .45 * pulse(.8) : .95;
-    qx(43.3, 32.6, 33.25, .55, .85, rgba(c, a));
-    glow(43.4, 32.9, .7, st === 'normal' ? 1.2 : 3, c, .55 * a);
-    box(37.1, 32.3, 0, 3, 1.25, 1.12, '#54647a');
-    // gantry crane
-    box(36.9, 27.4, 0, .3, .3, 6.2, '#b58a35'); box(43.5, 27.4, 0, .3, .3, 6.2, '#b58a35');
-    box(36.9, 27.3, 6.2, 6.9, .5, .45, '#c79a3f');
-    const tx = 39.6 + Math.sin(A * .18) * 1.6, top = P(tx, 27.55, 6.2), low = P(tx, 27.55, 3.5);
-    ctx.strokeStyle = S('#a0afc5'); ctx.lineWidth = .05; ctx.beginPath(); ctx.moveTo(top[0], top[1]); ctx.lineTo(low[0], low[1]); ctx.stroke();
-    box(tx - 1.5, 26.95, 2.4, 3, 1.2, 1.1, '#33558a');
-    lamp(36.6, 34.2);
   }
   function drawTower() {
-    const x = 22, y = 22;
-    ell(x, y, 0, 2.4, S('#2f4d4f'));
-    ell(x, y, .25, 2.05, S('#37585a'));
-    cyl(x, y, .25, 1.05, 7.2, '#9aa9bf');
+    const [x, y] = TOWER_AT;
+    ell(x, y, 0, 2.4, S(W.island));
+    ell(x, y, .25, 2.05, S(W.island2));
+    cyl(x, y, .25, 1.05, 7.2, W.tower);
     // stripe bands
     const [cx] = P(x, y), r = 1.28;
-    for (const zb of [2.2, 4.6]) { const p = P(x, y, zb), g = ctx.createLinearGradient(cx - r, 0, cx + r, 0); g.addColorStop(0, S('#3b4a60')); g.addColorStop(.6, S('#566880')); g.addColorStop(1, S('#3b4a60')); ctx.fillStyle = g; ctx.fillRect(cx - r, p[1] - .9, r * 2, .9); }
-    cyl(x, y, 7.45, 1.45, .22, '#c3d0e2');
+    for (const zb of [2.2, 4.6]) { const p = P(x, y, zb), g = ctx.createLinearGradient(cx - r, 0, cx + r, 0); g.addColorStop(0, S(W.band)); g.addColorStop(.6, S(W.band2)); g.addColorStop(1, S(W.band)); ctx.fillStyle = g; ctx.fillRect(cx - r, p[1] - .9, r * 2, .9); }
+    cyl(x, y, 7.45, 1.45, .22, W.cap);
     const awake = wakeLevel();
     const lampZ = 8.3;
-    cyl(x, y, 7.67, .78, 1.15, '#36465c', rgba(COL.lantern, .5 + .5 * awake));
+    cyl(x, y, 7.67, .78, 1.15, W.head, rgba(COL.lantern, .5 + .5 * awake));
     const [lx, ly] = P(x, y, lampZ);
     ctx.fillStyle = rgba(COL.lantern, .55 + .45 * awake); ctx.fillRect(lx - .78, ly - .34, 1.56, .72);
-    cyl(x, y, 8.82, .96, .16, '#4f6079');
+    cyl(x, y, 8.82, .96, .16, W.headtop);
     const [tx, ty] = P(x, y, 9.1);
-    poly([[tx - .95, ty + .22], [tx + .95, ty + .22], [tx, ty - .95]], S('#71829c'));
+    poly([[tx - .95, ty + .22], [tx + .95, ty + .22], [tx, ty - .95]], S(W.spire));
     glow(x, y, lampZ, 3 + 2 * awake, COL.lantern, (.3 + .26 * awake) * (1 - D * .75));
   }
   const wakeLevel = () => {
     const i = curIdx(); if (i < 0) return 0;
-    const c = CH[i], l = localOf(i), w = c.evs.wake;
+    const c = CH[i], l = localOf(i), w = c.evs.wake ?? c.wakeAt;
+    if (w === undefined) return 0;
     return ss((l - w + .2) / .6) * (1 - ss((l - (c.L - .9)) / .7));
   };
 
   const OBJECTS = [
-    { d: 18, f: drawWater }, { d: 32, f: drawData }, { d: 28, f: drawFish },
-    { d: 44, f: drawTower }, { d: 50, f: drawBarn }, { d: 53, f: drawEV },
-    { d: 66, f: drawYard }, { d: 76, f: drawMarket }
+    { d: 19, f: drawTransfer }, { d: 24.5, f: drawHead }, { d: 44.6, f: drawElectrical }, { d: 50, f: drawTower },
+    { d: 48, f: drawTruck }, { d: 51.9, f: drawFeeder }, { d: 55.3, f: drawTail },
+    { d: 64, f: () => { office(25.4, 30.2, .55); car(28.6, 34.6, W.car1); car(29.8, 34.6, W.car2); car(32.2, 34.6, W.car3); } }
   ];
+  for (let k = 0; k < SEGN; k++) OBJECTS.push({ d: BXC + TAILY - (k + .5) * SEGL, f: () => drawBeltSeg(k) });
+  DRV.forEach((v, d) => OBJECTS.push({ d: BX1 + 1 + v.y + .4, f: () => drawDrive(d) }));
   TREES.forEach(([x, y, s, k]) => OBJECTS.push({ d: x + y, f: () => (k ? round : pine)(x, y, s) }));
   LIGHTS.forEach(([x, y]) => OBJECTS.push({ d: x + y, f: () => lamp(x, y) }));
   OBJECTS.sort((a, b) => a.d - b.d);
 
-  /* ---------- traffic ---------- */
-  const RING = [[14, 14], [30, 14], [30, 30], [14, 30]];
-  function ringPos(u) {
-    u = ((u % 1) + 1) % 1; const k = u * 4, i = Math.floor(k), f = k - i, a = RING[i], b = RING[(i + 1) % 4];
-    return [lerp(a[0], b[0], f), lerp(a[1], b[1], f), i];
-  }
+  /* ---------- traffic: a pickup on the service road ---------- */
   function drawTraffic() {
-    [[.05, '#4a6d8f'], [.47, '#c7d1df'], [.71, '#8a5a4a']].forEach(([off, c], n) => {
-      const [x, y, side] = ringPos(off + A * .012 * (n === 1 ? 1.3 : 1));
-      const horiz = side % 2 === 0, lane = (side === 0 || side === 3) ? .27 : -.27;
-      const cx = horiz ? x : x + lane, cy = horiz ? y + lane : y;
-      if (horiz) box(cx - .55, cy - .25, .1, 1.1, .5, .36, c); else box(cx - .25, cy - .55, .1, .5, 1.1, .36, c);
-      const dx = side === 0 ? .9 : side === 2 ? -.9 : 0, dy = side === 1 ? .9 : side === 3 ? -.9 : 0;
-      glow(cx + dx, cy + dy, .2, 1.2, COL.lit, .55 * night());
-    });
+    const u = (A * .016) % 1, back = u > .5, y = lerp(3, 41, back ? 2 - u * 2 : u * 2), x = back ? 22.93 : 23.47;
+    box(x - .25, y - .55, .1, .5, 1.1, .36, W.car3);
+    glow(x, y + (back ? -.9 : .9), .2, 1.2, COL.lit, .55 * night());
   }
 
   /* ---------- links, pulses, the signal dot ---------- */
-  const LAMP = [22, 22, 8.3];
+  const LAMP = [TOWER_AT[0], TOWER_AT[1], 8.3];
   const arcPt = (a, b, u) => {
     const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2 - Math.hypot(a[0] - b[0], a[1] - b[1]) * .26;
     const v = 1 - u; return [v * v * a[0] + 2 * v * u * mx + u * u * b[0], v * v * a[1] + 2 * v * u * my + u * u * b[1]];
@@ -1253,11 +1279,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       const g = ctx.createRadialGradient(p[0], p[1], 0, p[0], p[1], 1.1); g.addColorStop(0, rgba(col, .6)); g.addColorStop(1, rgba(col, 0));
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(p[0], p[1], 1.1, 0, TAU); ctx.fill();
     };
-    if (!c.noUp) dot(home, lamp, ss((l - c.evs.alarm - .15) / 1.5), COL.alarm);
+    const raised = c.lines.find(x => x.ev === 'alarm');
+    if (!c.noUp && raised) dot(home, lamp, ss((l - raised.at - .15) / 1.5), STCOL[raised.st] || COL.alarm);
     for (const ln of c.lines) {
       if (ln.send) {
         const to = ln.send === true ? home : P(...ln.send);
         dot(lamp, to, ss((l - ln.at + .95) / .95), COL.lantern);
+        if (ln.back) dot(to, lamp, ss((l - ln.at - .5) / .95), COL.clear);
       }
       if (ln.ring) {
         const [rx, ry] = P(...ln.ring), u = l - ln.at;
@@ -1274,8 +1302,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   function updateBeam(dt) {
     const i = curIdx(), w = wakeLevel();
     let tx, ty, tr, ta;
-    if (i >= 0 && w > .02) { tx = CH[i].a[0]; ty = CH[i].a[1]; tr = 3.1; ta = .17 + .13 * w; }
-    else { const ang = A * .28; tx = 22 + Math.cos(ang) * 14.5; ty = 22 + Math.sin(ang) * 14.5; tr = 3.3; ta = .1; }
+    if (i >= 0 && w > .02) { tx = CH[i].a[0]; ty = CH[i].a[1]; tr = i === EMPTY ? 4.2 : 3.1; ta = .17 + .13 * w; }
+    else { const ang = A * .28; tx = 20 + Math.cos(ang) * 6; ty = 22 + Math.sin(ang) * 15; tr = 3.3; ta = .1; }
     const k = reduce ? 1 : 1 - Math.exp(-dt * 2.4);
     beam.x += (tx - beam.x) * k; beam.y += (ty - beam.y) * k; beam.r += (tr - beam.r) * k; beam.a += (ta - beam.a) * k;
   }
@@ -1294,33 +1322,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     ctx.globalCompositeOperation = op;
   }
 
-  /* ---------- storm over the water plant ---------- */
-  function drawStorm() {
-    const s = since(WATER, 'alarm'), l = localOf(WATER);
-    if (l < -.1 || l > CH[WATER].L + .4) return;
-    const on = ss(l / 1) * (1 - ss((since(WATER, 'ok') - .4) / 1.4));
-    if (on <= 0) return;
-    const blob = (x, y, r) => { const [cx, cy] = P(x, y, 10.5); ctx.beginPath(); ctx.ellipse(cx + Math.sin(A * .3) * .5, cy, r * 1.5, r * .62, 0, 0, TAU); ctx.fill(); };
-    ctx.fillStyle = `rgba(58,68,92,${.5 * on})`;
-    blob(12, 6, 3.2); blob(15, 3.5, 2.4); blob(9, 4, 2.3); blob(14, 8.5, 2); blob(11, 2.5, 1.9); blob(16.5, 6.5, 1.8); blob(12.5, 5, 2.2);
-    ctx.strokeStyle = `rgba(190,208,235,${.26 * on})`; ctx.lineWidth = .05; ctx.beginPath();
-    for (let i = 0; i < 46; i++) {
-      const px = 7 + WIN[i] * 10, py = 1 + WIN[i + 50] * 9, u = (A * 1.5 + WIN[i + 100]) % 1, a = P(px, py, 10 - u * 10), b = P(px, py, 10 - u * 10 - .55);
-      ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0] - .07, b[1]);
-    }
-    ctx.stroke();
-    for (const t0 of [0, .22]) {
-      const v = s - t0;
-      if (v > 0 && v < .16) {
-        const top = P(MAST[0], MAST[1], 10.5), end = P(MAST[0], MAST[1], 5.6); let x = top[0], y = top[1];
-        ctx.strokeStyle = '#f4f8ff'; ctx.lineWidth = .13; ctx.beginPath(); ctx.moveTo(x, y);
-        for (let k = 1; k <= 6; k++) { x = lerp(top[0], end[0], k / 6) + (k < 6 ? (WIN[k * 7] - .5) * 1.6 : 0); y = lerp(top[1], end[1], k / 6); ctx.lineTo(x, y); }
-        ctx.stroke();
-        glow(MAST[0], MAST[1], 6, 7, '#dfe9ff', .5);
-      }
-    }
-  }
-
   /* ---------- tags ---------- */
   const tagsEl = document.getElementById('tags');
   const mkTag = (i, k) => {
@@ -1329,9 +1330,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     tagsEl.appendChild(el);
     return { el, v: el.querySelector('.tag-v'), sub: el.querySelector('.tag-sub'), lim: el.querySelector('line'), lines: el.querySelectorAll('polyline'), cv: '', cs: '', st: '', on: null, tx: 0, ty: 0, op: -1 };
   };
-  const TAGS = CH.map((c, i) => { const t = mkTag(i, c.k); if (c.ox) t.el.style.setProperty('--ox', c.ox + 'px'); return t; });
+  const TAGS = CH.map((c, i) => { const t = mkTag(i, nb(c.k)); if (c.ox) t.el.style.setProperty('--ox', c.ox + 'px'); return t; });
   const TOWER = mkTag(-1, 'Tamoz');
-  TOWER.el.dataset.st = 'tower'; TOWER.el.style.setProperty('--ox', '66px');
+  // small permanent names on the plant: anchor in world units, nudge in pixels
+  const LABELS = [['D-1', [BX1 + 2.1, DRV[0].y, .3]], ['D-2', [BX1 + 1, DRV[1].y + .7, .1]], ['D-3', [BX1 + 2.1, DRV[2].y + .4, .2]], ['F-1', [18.45, 36.3, .1]]].map(([name, at]) => {
+    const el = document.createElement('div'); el.className = 'wlabel'; el.textContent = nb(name); tagsEl.prepend(el);
+    return { el, at, tx: 0, ty: 0 };
+  });
+  TOWER.el.dataset.st = 'tower'; TOWER.el.style.setProperty('--ox', '-36px');
 
   function readingAt(i, l) {
     const c = CH[i], cu = c.curve;
@@ -1339,7 +1345,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     for (let k = 1; k < cu.length; k++) if (l <= cu[k][0]) return lerp(cu[k - 1][1], cu[k][1], ss((l - cu[k - 1][0]) / (cu[k][0] - cu[k - 1][0])));
     return cu[cu.length - 1][1];
   }
-  const inGap = (i, l) => CH[i].gap && l >= CH[i].gap[0] && l < CH[i].gap[1];
   function updateTags() {
     const cur = curIdx();
     const overview = cur < 0;
@@ -1353,24 +1358,20 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       if (t.on !== on) { t.el.classList.toggle('on', on); t.on = on; }
       const showSt = st === 'normal' ? 'normal' : st;
       if (t.st !== showSt) { t.el.dataset.st = showSt; t.st = showSt; }
-      const gap = inGap(i, l);
       let val = readingAt(i, l);
       if (!on) val += Math.sin(A * .7 + i * 2) * c.wob;
-      const vs = gap ? 'no data' : val.toFixed(c.dp) + c.unit;
+      // the intro and the end show what was true then, not a chapter's first or last point
+      const vs = nb(T < INTRO ? c.ov[0] : T >= DAWN_AT ? c.ov[1] : Math.max(0, val).toFixed(c.dp) + c.unit);
       if (vs !== t.cv) { t.v.textContent = vs; t.cv = vs; }
       if (on) {
-        const sb = c.sub(l); if (sb !== t.cs) { t.sub.textContent = sb; t.cs = sb; }
-        // sparkline: history so far, with the alarm limit when there is one
+        const sb = nb(c.sub(l)); if (sb !== t.cs) { t.sub.textContent = sb; t.cs = sb; }
+        // sparkline: history so far, with the limit when there is one
         const vals = c.curve.map(p => p[1]).concat(c.limit === undefined ? [] : [c.limit]);
         const mn = Math.min(...vals), mx = Math.max(...vals), pad = (mx - mn) * .12 || 1;
         const yy = v => 28 - (v - (mn - pad)) / (mx - mn + 2 * pad) * 26;
-        const seg = [[], []]; let part = 0; const n = 36;
-        for (let k = 0; k <= n; k++) {
-          const s = k / n * c.L; if (s > l) break;
-          if (inGap(i, s)) { part = 1; continue; }
-          seg[part].push((k / n * 100).toFixed(1) + ',' + yy(readingAt(i, s)).toFixed(1));
-        }
-        t.lines[0].setAttribute('points', seg[0].join(' ')); t.lines[1].setAttribute('points', seg[1].join(' '));
+        const seg = []; const n = 36;
+        for (let k = 0; k <= n; k++) { const s = k / n * c.L; if (s > l) break; seg.push((k / n * 100).toFixed(1) + ',' + yy(readingAt(i, s)).toFixed(1)); }
+        t.lines[0].setAttribute('points', seg.join(' ')); t.lines[1].setAttribute('points', '');
         if (c.limit !== undefined) { const y = yy(c.limit).toFixed(1); t.lim.setAttribute('y1', y); t.lim.setAttribute('y2', y); t.lim.style.display = ''; } else t.lim.style.display = 'none';
       }
       const [sx, sy] = P(c.a[0], c.a[1], c.a[2]);
@@ -1379,9 +1380,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     const awake = wakeLevel() > .5;
     const ts = awake ? 'Agent awake' : 'Agent asleep';
     if (ts !== TOWER.cv) { TOWER.v.textContent = ts; TOWER.cv = ts; }
-    const [sx, sy] = P(22, 22, 10.2);
+    const [sx, sy] = P(TOWER_AT[0], TOWER_AT[1], 10.2);
     place(TOWER, sx, sy, overview ? 1 : 0);
     TOWER.el.classList.toggle('keep', overview);
+    for (const lb of LABELS) {
+      const [sx, sy] = P(...lb.at), x = Math.round((sx - cam.x) * cam.z + camScreen().x), y = Math.round((sy - cam.y) * cam.z + camScreen().y);
+      if (x !== lb.tx || y !== lb.ty) { lb.el.style.transform = `translate(${x}px,${y}px)`; lb.tx = x; lb.ty = y; }
+      // like the compact tags, the labels stay out of the small phone overview; F-1 steps aside while D-3 is the subject
+      lb.el.style.opacity = (phone && overview) || (lb.el.textContent.startsWith('F') && [0, 1, 4].includes(curIdx())) ? 0 : 1;
+    }
   }
 
   /* ---------- camera ---------- */
@@ -1392,43 +1399,49 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     const c = CH[i], [x, y] = P(c.a[0], c.a[1], c.a[2] * .55), l = localOf(i);
     const dip = 1 - .3 * (1 - ss(l / 1.1));
     const z = overviewZ * (phone ? c.zoom * .92 : c.zoom) * dip;
-    // on phones, sit the zone lower so its reading clears the clock
+    // on phones, sit the scene lower so its reading clears the clock
     return { x, y: y - (phone ? free.h * .13 / z : 0), z };
   }
 
   /* ---------- log and shift UI ---------- */
   const logZone = document.getElementById('logZone'), logTitle = document.getElementById('logTitle'), linesEl = document.getElementById('lines');
   const shiftEl = document.getElementById('shift');
-  const CSSCOL = { ok: 'var(--clear)', check: 'var(--lantern)', wait: 'var(--lantern)' };
+  const CSSCOL = { ok: 'var(--clear)', check: 'var(--lantern)', wait: 'var(--lantern)', alarm: 'var(--alarm)' };
   const ROWS = CH.map((c, i) => {
     const li = document.createElement('li'); li.style.setProperty('--res', CSSCOL[c.resSt]);
-    li.innerHTML = `<button type="button"><span class="s-time">${c.lines[0].time}</span><span class="s-name">${c.name}</span><span class="s-res">${c.res}</span></button>`;
+    li.innerHTML = `<button type="button"><span class="s-time">${c.lines[0].time}</span><span class="s-name">${nb(c.name)}</span><span class="s-res">${nb(c.res)}</span></button>`;
     li.firstChild.addEventListener('click', () => seek(i));
     shiftEl.appendChild(li);
     return { li, btn: li.firstChild, state: '' };
   });
   let logKey = '';
-  function setLog(zone, title, rows) {
-    logZone.textContent = zone; logTitle.textContent = title;
-    linesEl.innerHTML = rows.map(r => r[0] ? `<li><b>${r[0]}</b><span>${r[1]}</span></li>` : `<li class="plain"><span>${r[1]}</span></li>`).join('');
+  function setLog(zone, title, rows, wide = false) {
+    logZone.textContent = nb(zone); logTitle.textContent = nb(title);
+    linesEl.classList.toggle('wide', wide); linesEl.classList.remove('clip');
+    linesEl.innerHTML = rows.map(r => r[0] ? `<li><b>${r[0]}</b><span>${nb(r[1])}</span></li>` : `<li class="plain"><span>${nb(r[1])}</span></li>`).join('');
+    fitLog();
+  }
+  // the newest lines stay in view; earlier ones leave at the top under a fade
+  function fitLog() {
+    while (linesEl.children.length > 1 && linesEl.scrollHeight > linesEl.clientHeight + 1) { linesEl.firstElementChild.remove(); linesEl.classList.add('clip'); }
   }
   function updateLog() {
     const i = curIdx();
     if (T < INTRO) {
-      if (logKey !== 'intro') { logKey = 'intro'; setLog('On watch', 'Every site reports in. The agent sleeps until something changes.', [['', 'Normal readings pass through and cost nothing.']]); }
+      if (logKey !== 'intro') { logKey = 'intro'; setLog('On watch', 'Feeder at 100 %. Three drives share the belt at the same current. The AI sleeps until one of them changes.', [['', 'Normal readings pass through the rules and cost nothing.']]); }
     } else if (i >= 0) {
       const c = CH[i], l = localOf(i), n = c.lines.filter(x => l >= x.at).length, key = i + ':' + n;
       if (key !== logKey) {
         const prevSame = logKey.split(':')[0] === String(i), prevN = prevSame ? +logKey.split(':')[1] : 0;
         if (prevSame && n === prevN + 1) {
           const ln = c.lines[n - 1], li = document.createElement('li');
-          li.innerHTML = `<b>${ln.time}</b><span>${ln.text}</span>`; linesEl.appendChild(li);
+          li.innerHTML = `<b>${ln.time}</b><span>${nb(ln.text)}</span>`; linesEl.appendChild(li); fitLog();
         } else setLog(c.name, c.power, c.lines.slice(0, n).map(x => [x.time, x.text]));
         logKey = key;
       }
     } else if (logKey !== 'dawn') {
       logKey = 'dawn';
-      setLog('06:00 shift report', 'Seven events. Three people alerted.', [['5', 'closed, each one checked against the readings'], ['1', 'service ticket for the morning shift'], ['1', 'waiting for a QA signature'], ['7', 'full records, replayable step by step']]);
+      setLog('16:00 end of the test day', 'Five AI decisions. Three plant steps, each read back.', [['0', 'drive trips, and the belt never stranded'], ['1 h 21 min', 'between the planned stop and the trip D-3 would have had'], ['5', 'model calls in 16 hours of readings'], ['5 h 37 min', 'stranded, in the same day replayed with nobody acting']], true);
     }
     ROWS.forEach((r, k) => {
       const c = CH[k], now = T >= c.start && T < c.end, done = T >= c.start + c.lines[c.lines.length - 1].at;
@@ -1450,20 +1463,21 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
   /* ---------- sky ---------- */
   function drawSky() {
-    const top = [hx('#0a1224'), hx('#34477a')], bot = [hx('#14243f'), hx('#c9958d')];
+    const top = [hx(W.skytop), hx(W.skytopdawn)], bot = [hx(W.skylow), hx(W.skylowdawn)];
     const g = ctx.createLinearGradient(0, 0, 0, H);
     g.addColorStop(0, toHex(top[0].map((v, i) => lerp(v, top[1][i], D))));
     g.addColorStop(1, toHex(bot[0].map((v, i) => lerp(v, bot[1][i], D))));
-    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W_, H);
     for (const [x, y, s, ph] of STARS) {
-      ctx.fillStyle = rgba('#e8f0ff', (.3 + .4 * (.5 + .5 * Math.sin(A * .8 + ph))) * (1 - D));
-      ctx.beginPath(); ctx.arc(x * W, y * H, s, 0, TAU); ctx.fill();
+      ctx.fillStyle = rgba(W.star, (.3 + .4 * (.5 + .5 * Math.sin(A * .8 + ph))) * (1 - D));
+      ctx.beginPath(); ctx.arc(x * W_, y * H, s, 0, TAU); ctx.fill();
     }
   }
 
   /* ---------- frame ---------- */
   function render(dt) {
     D = ss((T - DAWN_AT - .6) / 4.4);
+    NOW = simAt(T);
     updateBeam(dt);
     const tg = camTarget(), k = reduce ? 1 : 1 - Math.exp(-dt * 1.9);
     cam.x += (tg.x - cam.x) * k; cam.y += (tg.y - cam.y) * k; cam.z += (tg.z - cam.z) * k;
@@ -1476,10 +1490,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     for (const o of OBJECTS) o.f();
     drawBeam();
     drawLinks();
-    drawStorm();
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     const fade = reduce ? 0 : Math.max(1 - ss(T / .9), ss((T - (TOTAL - .9)) / .9));
-    if (fade > .002) { ctx.fillStyle = `rgba(10,18,36,${fade})`; ctx.fillRect(0, 0, W, H); }
+    if (fade > .002) { ctx.fillStyle = rgba(COL.night, fade); ctx.fillRect(0, 0, W_, H); }
     updateTags(); updateLog(); updateClock();
   }
   let last = 0, settle = 0;
@@ -1509,14 +1522,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
   function resize() {
     const r = vp.getBoundingClientRect();
-    W = r.width; H = r.height; dpr = Math.min(2, window.devicePixelRatio || 1);
-    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    W_ = r.width; H = r.height; dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = Math.round(W_ * dpr); cv.height = Math.round(H * dpr);
     phone = matchMedia('(max-width:860px)').matches;
-    if (phone) free = { x: 0, y: 0, w: W, h: H };
+    if (phone) free = { x: 0, y: 0, w: W_, h: H };
     else {
       const left = document.querySelector('.lede').getBoundingClientRect().right - r.left;
       const bottom = shiftEl.getBoundingClientRect().top - r.top;
-      free = { x: left * .9, y: 0, w: W - left * .9, h: bottom };
+      free = { x: left * .9, y: 0, w: W_ - left * .9, h: bottom };
     }
     const prev = overviewZ;
     overviewZ = Math.min(free.w / 80, free.h / 53);
@@ -1527,25 +1540,24 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   new IntersectionObserver(es => { onScreen = es[0].isIntersecting; }, { threshold: .05 }).observe(vp);
   document.addEventListener('visibilitychange', () => { dirty = true; });
 
-  /* ---------- use-case pictures: the same world, shot from closer in, at each story's key moment ---------- */
-  const SHOT = [12, 7, 8.2, 6, 4, 4, 8.5];
+  /* ---------- result pictures: the same plant, shot from closer in, at each chapter's key moment ---------- */
+  const SHOT = [12, 7, 6, 7.6, 7.6, 7.6, 7.6];
   function paintThumbs() {
-    const main = { ctx, T, A, D, b: { ...beam } };
+    const main = { ctx, T, A, D, NOW, b: { ...beam } };
     document.querySelectorAll('canvas[data-zone]').forEach(c => {
       const i = +c.dataset.zone, r = c.getBoundingClientRect(); if (!r.width) return;
       const d = Math.min(2, window.devicePixelRatio || 1), ch = CH[i];
       c.width = Math.round(r.width * d); c.height = Math.round(r.height * d);
-      ctx = c.getContext('2d'); T = ch.start + SHOT[i]; A = 7.3; D = 0;
+      ctx = c.getContext('2d'); T = ch.start + SHOT[i]; A = 7.3; D = 0; NOW = simAt(T);
       Object.assign(beam, { x: ch.a[0], y: ch.a[1], r: 3.1, a: .2 });
-      const [x, y] = P(ch.a[0], ch.a[1], ch.a[2] * .45), z = Math.max(r.width / 25, r.height / 16);
-      ctx.setTransform(d, 0, 0, d, 0, 0); ctx.fillStyle = '#0a1224'; ctx.fillRect(0, 0, r.width, r.height);
+      const [x, y] = P(ch.a[0], ch.a[1], ch.a[2] * .45), z = Math.max(r.width / 25, r.height / 16) * (ch.tz || 1);
+      ctx.setTransform(d, 0, 0, d, 0, 0); ctx.fillStyle = COL.night; ctx.fillRect(0, 0, r.width, r.height);
       ctx.setTransform(d * z, 0, 0, d * z, d * (r.width / 2 - x * z), d * (r.height / 2 - y * z));
       drawGround(); drawTraffic();
       for (const o of OBJECTS) o.f();
       drawBeam();
-      if (i === WATER) drawStorm();
     });
-    ctx = main.ctx; T = main.T; A = main.A; D = main.D; Object.assign(beam, main.b);
+    ctx = main.ctx; T = main.T; A = main.A; D = main.D; NOW = main.NOW; Object.assign(beam, main.b);
   }
   let thumbTimer = 0;
   new ResizeObserver(() => { clearTimeout(thumbTimer); thumbTimer = setTimeout(paintThumbs, 120); }).observe(document.querySelector('.cases'));
@@ -1556,7 +1568,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     document.getElementById('top').scrollIntoView();
   }));
 
-  // The form has no inbox behind it yet: say so instead of pretending to send.
   /* pilot form: Formspree via fetch, no third-party script. Without JS the form posts directly. */
   const pilotForm = document.getElementById('pilotForm');
   pilotForm.addEventListener('submit', async e => {
