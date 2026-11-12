@@ -49,7 +49,7 @@ Then open <http://127.0.0.1:8765/> for the live page, or `/designs/<name>.html` 
 
 - The pilot request form posts to Formspree (`https://formspree.io/f/mjywbebj`) with `fetch`, and without JS it posts directly. Submissions go to the inbox set in the Formspree dashboard. The form still needs a privacy note and a privacy page.
 - The designs are separate copies, so a change that should apply to all of them has to be made in each file.
-- `designs/conveyor.html` cites two pages that are not live yet: source 3 (the personal-site conveyor page) and source 4 (`WEBSITE.md` on the streams-simulator `belt-m4-evidence` branch). Update both links once they are merged.
+- `designs/conveyor.html` cites two pages that are not final yet. Source 3 (the personal-site conveyor page) returns 404 until personal-site PR #42 merges, so don't make the conveyor design live before it resolves. Source 4 points at `WEBSITE.md` on the streams-simulator `belt-m4-evidence` branch; point it at `main` once PR #60 merges.
 
 ## Related
 
