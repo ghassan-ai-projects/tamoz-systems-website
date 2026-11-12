@@ -226,6 +226,7 @@ h1{margin:0;font-family:var(--lede);font-weight:600;font-size:clamp(30px,min(3.0
 .watch svg{width:12px;height:12px;fill:currentColor}
 
 #tags{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.wlabel{position:absolute;left:0;top:0;will-change:transform;margin:-9px 0 0 -14px;padding:1px 5px;border-radius:3px;background:var(--tag-bg);border:1px solid var(--hair);font-family:var(--data);font-size:11px;line-height:1.3;color:var(--ink);white-space:nowrap}
 .tag{position:absolute;left:0;top:0;will-change:transform;transition:opacity .45s;--c:var(--clear)}
 .tag[data-st=alarm]{--c:var(--alarm)}
 .tag[data-st=check],.tag[data-st=wait]{--c:var(--lantern)}
@@ -505,7 +506,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <h2>From drive signal to a planned stop</h2>
     <p class="intro">Tamoz sits above your PLCs, drive inverters, SCADA and maintenance system. It doesn't replace them, and a case stays open until the readings show the belt is safe.</p>
     <ol class="flow">
-      <li><span class="who">Rules, always on</span><h3>Watch</h3><p>A deterministic layer turns drive currents, winding temperatures, vibration, belt speed and feed into windowed values, and compares every drive with its peers around the clock. Normal readings never reach the AI: on our test day, 221,709 sensor events led to five model calls.</p></li>
+      <li><span class="who">Rules, always on</span><h3>Watch</h3><p>A deterministic layer turns drive currents, winding temperatures, vibration, belt speed and feed into windowed values, and compares every drive with its peers around the clock. Normal readings never reach the AI: on our test day, 77,705 sensor readings led to five model calls.</p></li>
       <li><span class="who">AI agent, on change only</span><h3>Judge</h3><p>When one drive starts to differ, the agent wakes. It checks whether it's one drive or the whole belt, what else could explain it, how sure it can be and how long the drive has left.</p></li>
       <li><span class="who">AI decides, limits apply</span><h3>Act</h3><p>It asks for a step from the list your team defines, such as running the belt empty or stopping a drive by plan. Stopping steps wait for a person's approval, and your own controls decide how far any step goes.</p></li>
       <li><span class="who">Rules, always on</span><h3>Verify</h3><p>A step counts only when the plant reads it back. "On it" doesn't close a case. If the readings don't follow, it moves to the next person on the list.</p></li>
@@ -540,15 +541,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   <div class="wrap">
     <p class="eyebrow">Results</p>
     <h2>Seven stories, graded against doing nothing</h2>
-    <p class="intro">Each story ran on up to 10 simulated days with the rules and a scripted stand-in for the AI: 113 of 113 runs passed. Then the live AI, a commercial language model, ran three days of each fault story, and every story passed, 3 of 3. Every run is graded against doing nothing and four simple rules, including a plain vibration alarm.<a class="ref" href="#sources">4</a> The animation replays one day; each button opens the moment in it that shows the same skill.</p>
+    <p class="intro">Each story ran on up to 10 simulated days with the rules and a scripted stand-in for the AI: 113 of 113 runs passed. Then the live AI, a commercial language model, ran three days of each fault story, and every story passed, 3 of 3. Every run is graded against doing nothing and four simple rules, including a plain vibration alarm.<a class="ref" href="#sources">4</a> The animation replays one day; each button opens the moment in it that shows the same skill. The grade is the simulator's cost score, in equivalent production hours: tonnes not delivered, a stranded belt, protective trips, drive wear and needless stops each carry a weight. It is not a measured saving.</p>
     <div class="cases">
-      <article class="case wide"><canvas data-zone="0" aria-hidden="true"></canvas><h3>Bearing failure, small drive margin</h3><p>D-3's bearing dries out over hours. Left alone, it trips, and the two healthy drives follow within two minutes. On the day in the animation, Tamoz flagged D-3 4 h 49 min before its trip, emptied the belt and stopped D-3 by plan 1 h 21 min before the trip. The line moved 47 t less than the same day with nobody acting (1,510 t against 1,557 t), and ended with a running belt instead of one stranded for 5 h 37 min. Rules alone: 10 of 10 days. Live AI: 3 of 3.<a class="ref" href="#sources">3</a></p><button type="button" data-jump="0">Watch D-3 against its peers</button></article>
+      <article class="case wide"><canvas data-zone="0" aria-hidden="true"></canvas><h3>Bearing failure, small drive margin</h3><p>D‑3's bearing dries out over hours. Left alone, it trips, and the two healthy drives follow within two minutes. On the day in the animation, Tamoz flagged D‑3 4 h 49 min before its trip, emptied the belt and stopped D‑3 by plan 1 h 21 min before the trip. The line moved 47 t less than the same day with nobody acting (1,510 t against 1,557 t), and ended with a running belt instead of one stranded for 5 h 37 min. Rules alone: 10 of 10 days. Live AI: 3 of 3.<a class="ref" href="#sources">3</a></p><button type="button" data-jump="0">Watch D‑3 against its peers</button></article>
       <article class="case"><canvas data-zone="5" aria-hidden="true"></canvas><h3>Sudden drive trip</h3><p>A drive trips under full load with no warning. On the small-margin plant, the other two have about two minutes. The live AI cut the feed within 14 s of the trip, 3 of 3. A rule that always runs at reduced feed scores the same here, so we count this story as easy.</p><button type="button" data-jump="5">Watch the limp feed</button></article>
-      <article class="case"><canvas data-zone="3" aria-hidden="true"></canvas><h3>Gearbox seizure</h3><p>Oil loss raises the drag on D-3 until its gearbox locks and the belt stalls. Tamoz named D-3 about half an hour after the oil loss began, and the belt carried at most 15 % of its load when the gearbox seized, so it never stalled loaded. Rules: 10 of 10. Live AI: 3 of 3.</p><button type="button" data-jump="3">Watch the belt run empty</button></article>
-      <article class="case"><canvas data-zone="2" aria-hidden="true"></canvas><h3>Frozen or silent sensor</h3><p>D-3's vibration sensor freezes at a healthy value, or stops reporting, before its bearing starts to fail. Tamoz reported the sensor within about 15 minutes, then caught the bearing from the winding temperature. Rules: 10 of 10 each. Live AI: 3 of 3 each.</p><button type="button" data-jump="2">Watch the winding trend</button></article>
+      <article class="case"><canvas data-zone="3" aria-hidden="true"></canvas><h3>Gearbox seizure</h3><p>Oil loss raises the drag on D‑3 until its gearbox locks and the belt stalls. Tamoz named D‑3 about half an hour after the oil loss began, and the belt carried at most 15 % of its load when the gearbox seized, so it never stalled loaded. Rules: 10 of 10. Live AI: 3 of 3.</p><button type="button" data-jump="3">Watch the belt run empty</button></article>
+      <article class="case"><canvas data-zone="2" aria-hidden="true"></canvas><h3>Frozen or silent sensor</h3><p>D‑3's vibration sensor freezes at a healthy value, or stops reporting, before its bearing starts to fail. Tamoz reported the sensor within about 15 minutes, then caught the bearing from the winding temperature. Rules: 10 of 10 each. Live AI: 3 of 3 each.</p><button type="button" data-jump="2">Watch the winding trend</button></article>
       <article class="case"><canvas data-zone="6" aria-hidden="true"></canvas><h3>Feed surges and normal days</h3><p>A surge loads all three drives at once, and the feed swings through the day. That is not a failing drive. In 40 control runs: no alarm, no step. These ran with the rules and a scripted stand-in, not the live AI.</p><button type="button" data-jump="6">Watch a routine stop pass</button></article>
-      <article class="case"><canvas data-zone="1" aria-hidden="true"></canvas><h3>Lead drive lost</h3><p>D-1, which sets the belt speed, trips. Where the plant hands the lead to D-2, Tamoz saw it within 10–13 s and beat all five baselines. Where the plant stops the whole belt, nothing can prevent the stop, and Tamoz made no attempt to restart the loaded belt. Rules: 10 of 10. Live AI: 3 of 3.</p><button type="button" data-jump="1">Watch it decide not to act</button></article>
-      <article class="case wide"><canvas data-zone="4" aria-hidden="true"></canvas><h3>Bearing failure, large drive margin</h3><p>Here two drives can carry the belt alone, at 0.97 times their rating, but in our model they age 8.5 times faster, and a loaded belt may not restart after the next routine stop. Tamoz named the bearing 0.3–0.9 h after it began to fail, stopped D-3 by plan and fed no more than two drives can restart, 54 %. Rules: 10 of 10 days, each scoring 1.0 to 3.2 equivalent production hours better than doing nothing. Live AI: 3 of 3.</p><button type="button" data-jump="4">Watch the planned stop</button></article>
+      <article class="case"><canvas data-zone="1" aria-hidden="true"></canvas><h3>Lead drive lost</h3><p>D‑1, which sets the belt speed, trips. Where the plant hands the lead to D‑2, Tamoz saw it within 10–13 s and beat all five baselines. Where the plant stops the whole belt, nothing can prevent the stop, and Tamoz made no attempt to restart the loaded belt. Rules: 10 of 10. Live AI: 3 of 3.</p><button type="button" data-jump="1">Watch it decide not to act</button></article>
+      <article class="case wide"><canvas data-zone="4" aria-hidden="true"></canvas><h3>Bearing failure, large drive margin</h3><p>Here two drives can carry the belt alone, at 0.97 times their rating, but in our model they age 8.5 times faster, and a loaded belt may not restart after the next routine stop. Tamoz named the bearing 0.3–0.9 h after it began to fail, stopped D‑3 by plan and fed no more than two drives can restart, 54 %. Rules: 10 of 10 days, each scoring 1.0 to 3.2 equivalent production hours better than doing nothing. Live AI: 3 of 3.</p><button type="button" data-jump="4">Watch the planned stop</button></article>
     </div>
   </div>
 </section>
@@ -663,6 +664,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   const hx = h => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
   const toHex = a => '#' + a.map(v => clamp(Math.round(v), 0, 255).toString(16).padStart(2, '0')).join('');
   const rgba = (h, a) => { const c = hx(h); return `rgba(${c[0]},${c[1]},${c[2]},${a})`; };
+  const nb = s => s.replace(/\b([DF])-(\d)/g, '$1\u2011$2');
   const mix = (a, b, t) => { const p = hx(a), q = hx(b); return toHex(p.map((v, i) => lerp(v, q[i], t))); };
 
   /* ---------- colours: every colour is a token on :root (--alarm … and --w-*), read once here ---------- */
@@ -693,8 +695,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   /* ---------- the test day: every time, reading and decision is from one replayed simulated run ---------- */
   const CH = [
     { id: 'peers', name: 'D-3 against its peers', power: 'Compares each drive with its peers', res: 'Watch set', resSt: 'check',
-      k: 'D-3 winding above peers', a: [19.6, 38.2, 2], zoom: 2.2, unit: ' K', dp: 1, wob: .02, L: 16.5,
-      curve: [[0, 0.0], [1.4, 0.0], [3.4, 1.0], [5.6, 2.0], [16.5, 2.0]],
+      k: 'D-3 winding above peers', ov: ['0.0 K', 'D-3 stopped'], a: [19.6, 38.2, 2], zoom: 2.2, unit: ' K', dp: 1, wob: .02, L: 16.5,
+      curve: [[0, 0.0], [1.4, 0.0], [2.4, 0.1], [3.0, 0.5], [3.4, 1.0], [5.6, 2.0], [16.5, 2.0]],
       sub: l => l < 3.4 ? 'Same current as D-1 and D-2' : l < 10.6 ? 'Same current · winding rising' : 'Watch set on vibration',
       lines: [
         { at: 1.4, time: '01:41', text: 'Sealed truth, hidden from Tamoz until grading: D-3\'s bearing starts losing its lubrication. Nothing shows yet.' },
@@ -705,7 +707,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         { at: 13.2, time: '05:32', st: 'check', ev: 'ok', text: 'Full feed stays on. Nothing to stop yet; the case stays open.' }
       ] },
     { id: 'bearing', name: 'Bearing named', power: 'Names a cause only when the evidence does', res: 'Full feed kept', resSt: 'check',
-      k: 'D-3 vibration above peers', a: [18.5, 38.2, 1.6], ox: -170, zoom: 2.4, unit: ' mm/s', dp: 2, limit: .30, wob: .004, L: 10.5,
+      k: 'D-3 vibration above peers', ov: ['0.00 mm/s', 'D-3 stopped'], a: [18.5, 38.2, 1.6], ox: -170, zoom: 2.4, unit: ' mm/s', dp: 2, limit: .30, wob: .004, L: 10.5,
       curve: [[0, 0.10], [1.2, 0.30], [10.5, 0.30]],
       sub: l => l < 1.2 ? 'Watch at +0.30 mm/s' : 'Bearing named · full feed',
       lines: [
@@ -715,9 +717,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         { at: 7.6, time: '06:32', st: 'check', ev: 'ok', text: 'Bearing named, confidence 0.72. Full feed until the planned stop; the watch stays on.' }
       ] },
     { id: 'predict', name: 'Trip predicted', power: 'Says how long a drive has left', res: 'Trip in 1 h 33 min', resSt: 'alarm',
-      k: 'D-3 time to trip', a: [20.7, 22.85, 2.2], ox: 90, zoom: 2.1, unit: ' h', dp: 2, limit: 1.55, wob: .004, L: 10.5,
-      curve: [[0, 4.30], [1.2, 1.55], [10.5, 1.55]],
-      sub: l => l < 3.2 ? 'Plan: stop 1.5 h before the trip, plus 3 min to empty' : 'Trip predicted about 10:24',
+      k: 'D-3 time to trip', ov: ['no prediction', 'D-3 stopped'], a: [20.7, 22.85, 2.2], ox: 90, zoom: 2.1, unit: ' h', dp: 2, limit: 1.55, wob: .004, L: 10.5,
+      curve: [[0, 4.30], [1.1, 4.30], [1.2, 1.55], [10.5, 1.55]],
+      sub: l => l < 1.2 ? 'Last prediction at 06:32' : l < 3.2 ? 'Plan: stop 1.5 h before the trip, plus 3 min to empty' : 'Trip predicted about 10:24',
       lines: [
         { at: 1.2, time: '08:51', st: 'alarm', ev: 'alarm', text: 'D-3\'s winding is about 19 K above its peers and climbing 8.9 K/h. Its vibration is 1.76 mm/s above theirs.' },
         { at: 3.2, time: '08:51', ev: 'wake', text: 'A curve fitted to the winding temperature: trip in 1 h 33 min, at about 10:24.' },
@@ -725,7 +727,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         { at: 7.6, time: '08:51', st: 'check', ev: 'ok', text: 'Graded afterwards: left alone, D-3 would have tripped at 10:21. The prediction was 3 minutes late.' }
       ] },
     { id: 'empty', name: 'Belt emptied', power: 'Asks a person before stopping anything', res: 'Belt empty', resSt: 'ok',
-      k: 'Material on the belt', a: [17, 22.6, 2.3], ox: -60, zoom: 1.35, tz: .6, wakeAt: 0, unit: ' t', dp: 2, wob: .004, L: 10.5,
+      k: 'Material on the belt', ov: ['1.25 t', '0.23 t'], a: [17, 22.6, 2.3], ox: -60, zoom: 1.35, tz: .6, wakeAt: 0, unit: ' t', dp: 2, wob: .004, L: 10.5,
       curve: [[0, 1.25], [3.2, 1.25], [5.2, 0.36], [7.6, 0.00], [10.5, 0.00]],
       sub: l => l < 3.2 ? 'Feeder 100 %' : l < 7.6 ? 'Feeder 0 % · running empty' : 'Belt empty',
       lines: [
@@ -735,8 +737,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         { at: 7.6, time: '08:58', st: 'ok', ev: 'ok', text: 'Belt empty. D-1, D-2 and D-3 still turn it at 2 m/s.' }
       ] },
     { id: 'stop', name: 'D-3 stopped by plan', power: 'Turns a trip into a planned stop', res: '1 h 21 min early', resSt: 'ok',
-      k: 'D-3 winding', a: [17.7, 38.2, 1.4], ox: 155, zoom: 2.2, tz: .7, wakeAt: 0, unit: ' °C', dp: 0, limit: 150, wob: .2, L: 10.5,
-      curve: [[0, 131], [3.2, 123], [7.6, 107], [10.5, 47]],
+      k: 'D-3 winding', ov: ['111 °C', '35 °C'], a: [17.7, 38.2, 1.4], ox: 155, zoom: 2.2, tz: .7, wakeAt: 0, unit: ' °C', dp: 0, limit: 150, wob: .2, L: 10.5,
+      curve: [[0, 131], [1.2, 131], [3.2, 123], [10.5, 123]],
       sub: l => l < 3.2 ? 'Trip at 150 °C' : 'Stopped by plan · cooling',
       lines: [
         { at: 1.2, time: '08:57', st: 'check', ev: 'alarm', text: 'Cause confirmed, confidence 0.9. The AI asks to stop D-3 by plan, on the empty belt.' },
@@ -745,8 +747,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         { at: 7.6, time: '09:00', st: 'ok', ev: 'ok', text: 'Graded afterwards: stopped 1 h 21 min before its trip. A plain vibration alarm would have stopped it at 09:34.' }
       ] },
     { id: 'limp', name: 'Two drives, limp feed', power: 'Keeps the belt producing on two drives', res: 'Feed 18 %', resSt: 'ok',
-      k: 'Feeder setpoint', a: [17, 33.6, 3.6], zoom: 2.2, unit: ' %', dp: 0, limit: 18, wob: .1, L: 10.5,
-      curve: [[0, 0], [5.2, 18], [10.5, 18]],
+      k: 'Feeder setpoint', ov: ['100 %', '18 %'], a: [17, 33.6, 3.6], zoom: 2.2, unit: ' %', dp: 0, limit: 18, wob: .1, L: 10.5,
+      curve: [[0, 0], [5.19, 0], [5.2, 18], [10.5, 18]],
       sub: l => l < 5.2 ? 'Feeder 0 % · D-3 stopped' : 'Limp feed · two drives',
       lines: [
         { at: 1.2, time: '09:01', st: 'check', ev: 'alarm', text: 'D-3 is cooling, falling 2.2 K/h. D-1 and D-2 share the load evenly.' },
@@ -755,11 +757,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         { at: 7.6, time: '09:30', st: 'ok', ev: 'ok', text: 'The belt keeps producing on two drives. D-3 is down to 47 °C.' }
       ] },
     { id: 'restart', name: 'Routine stop, clean restart', power: 'Leaves a routine stop alone', res: 'Restarted', resSt: 'ok',
-      k: 'Belt speed', a: [17.7, 12, 1.2], ox: -60, zoom: 2, unit: ' m/s', dp: 1, wob: .004, L: 10.5, noUp: true,
-      curve: [[0, 2.0], [1.2, 0.0], [5.2, 0.0], [7.6, 2.0], [10.5, 2.0]],
+      k: 'Belt speed', ov: ['2.0 m/s', '2.0 m/s'], a: [17.7, 12, 1.2], ox: -60, zoom: 2, unit: ' m/s', dp: 1, wob: .004, L: 10.5, noUp: true,
+      curve: [[0, 2.0], [1.1, 2.0], [1.2, 0.0], [5.2, 0.0], [7.6, 2.0], [10.5, 2.0]],
       sub: l => l < 1.2 ? 'Downstream permit on' : l < 5.2 ? 'Routine stop · 226 kg on the belt' : 'Restarted on two drives',
       lines: [
-        { at: 1.2, time: '12:25', st: 'check', ev: 'alarm', text: 'Routine stop downstream. The belt halts with 226 kg on it.' },
+        { at: 1.2, time: '12:25', ev: 'alarm', text: 'Routine stop downstream. The belt halts with 226 kg on it.' },
         { at: 3.2, time: '12:25', ev: 'note', text: 'A planned stop, not a fault. No alarm, and no call to the AI.' },
         { at: 5.2, time: '12:55', ev: 'act', text: 'Run permit back. D-1 and D-2 start the light belt.' },
         { at: 7.6, time: '12:56', st: 'ok', ev: 'ok', text: 'Belt back at 2 m/s. No drive tripped all day, and the belt never stranded.' }
@@ -1328,8 +1330,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     tagsEl.appendChild(el);
     return { el, v: el.querySelector('.tag-v'), sub: el.querySelector('.tag-sub'), lim: el.querySelector('line'), lines: el.querySelectorAll('polyline'), cv: '', cs: '', st: '', on: null, tx: 0, ty: 0, op: -1 };
   };
-  const TAGS = CH.map((c, i) => { const t = mkTag(i, c.k); if (c.ox) t.el.style.setProperty('--ox', c.ox + 'px'); return t; });
+  const TAGS = CH.map((c, i) => { const t = mkTag(i, nb(c.k)); if (c.ox) t.el.style.setProperty('--ox', c.ox + 'px'); return t; });
   const TOWER = mkTag(-1, 'Tamoz');
+  // small permanent names on the plant: anchor in world units, nudge in pixels
+  const LABELS = [['D-1', [BX1 + 2.4, DRV[0].y - .3, 0], 62], ['D-2', [BX1 + 2.4, DRV[1].y + .3, 0], 30], ['D-3', [BX1 + 2.4, DRV[2].y + .3, 0], 0], ['F-1', [15.8, 36.9, 0], -12]].map(([name, at, dx]) => {
+    const el = document.createElement('div'); el.className = 'wlabel'; el.textContent = nb(name); tagsEl.prepend(el);
+    return { el, at, dx, tx: 0, ty: 0 };
+  });
   TOWER.el.dataset.st = 'tower'; TOWER.el.style.setProperty('--ox', '66px');
 
   function readingAt(i, l) {
@@ -1353,10 +1360,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       if (t.st !== showSt) { t.el.dataset.st = showSt; t.st = showSt; }
       let val = readingAt(i, l);
       if (!on) val += Math.sin(A * .7 + i * 2) * c.wob;
-      const vs = Math.max(0, val).toFixed(c.dp) + c.unit;
+      // the intro and the end show what was true then, not a chapter's first or last point
+      const vs = nb(T < INTRO ? c.ov[0] : T >= DAWN_AT ? c.ov[1] : Math.max(0, val).toFixed(c.dp) + c.unit);
       if (vs !== t.cv) { t.v.textContent = vs; t.cv = vs; }
       if (on) {
-        const sb = c.sub(l); if (sb !== t.cs) { t.sub.textContent = sb; t.cs = sb; }
+        const sb = nb(c.sub(l)); if (sb !== t.cs) { t.sub.textContent = sb; t.cs = sb; }
         // sparkline: history so far, with the limit when there is one
         const vals = c.curve.map(p => p[1]).concat(c.limit === undefined ? [] : [c.limit]);
         const mn = Math.min(...vals), mx = Math.max(...vals), pad = (mx - mn) * .12 || 1;
@@ -1375,6 +1383,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     const [sx, sy] = P(TOWER_AT[0], TOWER_AT[1], 10.2);
     place(TOWER, sx, sy, overview ? 1 : 0);
     TOWER.el.classList.toggle('keep', overview);
+    for (const lb of LABELS) {
+      const [sx, sy] = P(...lb.at), x = Math.round((sx - cam.x) * cam.z + camScreen().x + lb.dx), y = Math.round((sy - cam.y) * cam.z + camScreen().y);
+      if (x !== lb.tx || y !== lb.ty) { lb.el.style.transform = `translate(${x}px,${y}px)`; lb.tx = x; lb.ty = y; }
+    }
   }
 
   /* ---------- camera ---------- */
@@ -1395,16 +1407,16 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   const CSSCOL = { ok: 'var(--clear)', check: 'var(--lantern)', wait: 'var(--lantern)', alarm: 'var(--alarm)' };
   const ROWS = CH.map((c, i) => {
     const li = document.createElement('li'); li.style.setProperty('--res', CSSCOL[c.resSt]);
-    li.innerHTML = `<button type="button"><span class="s-time">${c.lines[0].time}</span><span class="s-name">${c.name}</span><span class="s-res">${c.res}</span></button>`;
+    li.innerHTML = `<button type="button"><span class="s-time">${c.lines[0].time}</span><span class="s-name">${nb(c.name)}</span><span class="s-res">${nb(c.res)}</span></button>`;
     li.firstChild.addEventListener('click', () => seek(i));
     shiftEl.appendChild(li);
     return { li, btn: li.firstChild, state: '' };
   });
   let logKey = '';
   function setLog(zone, title, rows, wide = false) {
-    logZone.textContent = zone; logTitle.textContent = title;
+    logZone.textContent = nb(zone); logTitle.textContent = nb(title);
     linesEl.classList.toggle('wide', wide); linesEl.classList.remove('clip');
-    linesEl.innerHTML = rows.map(r => r[0] ? `<li><b>${r[0]}</b><span>${r[1]}</span></li>` : `<li class="plain"><span>${r[1]}</span></li>`).join('');
+    linesEl.innerHTML = rows.map(r => r[0] ? `<li><b>${r[0]}</b><span>${nb(r[1])}</span></li>` : `<li class="plain"><span>${nb(r[1])}</span></li>`).join('');
     fitLog();
   }
   // the newest lines stay in view; earlier ones leave at the top under a fade
@@ -1421,7 +1433,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         const prevSame = logKey.split(':')[0] === String(i), prevN = prevSame ? +logKey.split(':')[1] : 0;
         if (prevSame && n === prevN + 1) {
           const ln = c.lines[n - 1], li = document.createElement('li');
-          li.innerHTML = `<b>${ln.time}</b><span>${ln.text}</span>`; linesEl.appendChild(li); fitLog();
+          li.innerHTML = `<b>${ln.time}</b><span>${nb(ln.text)}</span>`; linesEl.appendChild(li); fitLog();
         } else setLog(c.name, c.power, c.lines.slice(0, n).map(x => [x.time, x.text]));
         logKey = key;
       }
